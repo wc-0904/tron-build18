@@ -23,26 +23,8 @@ module chipInterface (
   // Put your vga module here
   logic [9:0] row, col;
   logic HS, VS, blank;
-  logic [3:0] pad_info;
 
   vga VGA(.clock_40MHz(clk_40MHz), .reset, .HS, .VS, .blank, .row, .col);
-
-// For Task 2, put your test pattern generator here
-//   test_pattern_generator test(.*);
-
-// For Task 3, put your pong module(s) here
-  logic SW_rmove, SW_rup, SW_lmove, SW_lup, BTN_reset;
-  logic [19:0]new_pad_y;
-  logic collide_l, collide_r, collide_t, collide_b, pass_l, pass_r;
-  logic up_p, up_b, draw_p, draw_b, serve, center, score_l, score_r;
-  logic [3:0]ball_info, left_score, right_score;
-  logic [9:0]new_y, new_x;
-  logic [19:0] new_ball_xy;
-  logic [6:0] count_out, end_val;
-  logic flash_en, count_done, count_up, AeqB_d, AgtB_d, game_over, win;
-
-  assign flash_en = (row == 10'd599) & (col == 10'd799);
-  assign end_val = 7'd125;
   
   Synchronizer syn1(.async(SW[15]), .clock(clk_40MHz), .sync(SW_lup));
   Synchronizer syn2(.async(SW[14]), .clock(clk_40MHz), .sync(SW_lmove));
