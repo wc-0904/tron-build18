@@ -1,15 +1,16 @@
 `default_nettype none
 
 module draw_object
-    (input logic clock, reset,
+    (input logic clock, reset, center,
      input logic [9:0] row, col,
-     input logic [3:0] pad_info,
+     input logic [3:0] p1_info, p2_info,
      output logic [7:0] red, green, blue);
 
     //logic for register to keep track of traces
     logic [599:0][599:0] p1_trace, p2_trace;
     logic en_trace;
-    logic new_x1, new_x2, new_y1, new_y2;
+    logic [9:0] new_x1, new_x2, new_y1, new_y2;
+    logic [9:0] start_x1, start_x2, start_y1, start_y2;
 
     always_ff @(posedge clock, posedge reset) begin
         if (reset) begin
@@ -21,6 +22,15 @@ module draw_object
             p2_trace <= p2_trace;
         end
     end
+
+    assign start_x1 = 10'd6;
+    assign start_y1 = 10'd594;
+    assign start_x2 = 10'd594;
+    assign start_y2 = 10'd6;
+
+    player_update p1(.en, .clock, .reset, .default,
+                    .start_x1, .start_x2, .start_y1, .start_y2,
+                    .);
 
 
 endmodule: draw_object
