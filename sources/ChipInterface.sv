@@ -34,11 +34,16 @@ module chipInterface (
   Synchronizer syn6(.async(BTN[3]), .clock(clk_40MHz), .sync(serve));
   
   assign pad_info = {SW_lmove, SW_rmove, SW_lup, SW_rup};
-  draw_paddle dp(.reset(BTN_reset), .clock(clk_40MHz), .red(red_p),
-                .green(green_p), .blue(blue_p), .*);
-  draw_ball db(.pad_y(new_pad_y), .reset(BTN_reset), .clock(clk_40MHz),
-              .red(red_b), .green(green_b), .blue(blue_b), .*);
-  gameFSM fsm(.clock(clk_40MHz), .reset(BTN_reset), .*);
+//   draw_paddle dp(.reset(BTN_reset), .clock(clk_40MHz), .red(red_p),
+//                 .green(green_p), .blue(blue_p), .*);
+//   draw_ball db(.pad_y(new_pad_y), .reset(BTN_reset), .clock(clk_40MHz),
+//               .red(red_b), .green(green_b), .blue(blue_b), .*);
+//   gameFSM fsm(.clock(clk_40MHz), .reset(BTN_reset), .*);
+  
+    draw_obj do(); //TODO: fill in the instantiation
+
+    draw_border db(); //TODO: fill in
+
   EightSevenSegmentDisplays ssd(.CLOCK_100(clock_40MHz),
                                 .reset,
                                 .dec_points('0),
