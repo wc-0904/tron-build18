@@ -1,4 +1,4 @@
-`default_nettype none
+// `default_nettype none
 
 module draw_border(
     input logic clock, reset,
@@ -13,15 +13,15 @@ module draw_border(
                          .high(10'd4), .is_between(left_v));
 
     //Right vertical
-    RangeCheck #(10) rc0(.val(col), .low(10'd796),
+    RangeCheck #(10) rc1(.val(col), .low(10'd796),
                          .high(10'd800), .is_between(right_v));
 
     //Top horizontal
-    RangeCheck #(10) rc0(.val(row), .low(10'd0),
+    RangeCheck #(10) rc2(.val(row), .low(10'd0),
                          .high(10'd4), .is_between(top_h));
 
     //Bottom horizontal
-    RangeCheck #(10) rc0(.val(row), .low(10'd596),
+    RangeCheck #(10) rc3(.val(row), .low(10'd596),
                          .high(10'd600), .is_between(bottom_h));
 
     always_comb begin
