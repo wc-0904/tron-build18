@@ -22,6 +22,7 @@ module chipInterface (
   // Your code
   // Put your vga module here
   logic [9:0] row, col;
+  logic [7:0] red, green, blue;
   logic HS, VS, blank;
 
   vga VGA(.clock_40MHz(clk_40MHz), .reset, .HS, .VS, .blank, .row, .col);
@@ -47,7 +48,7 @@ module chipInterface (
   
     // draw_obj do(); //TODO: fill in the instantiation
 
-    draw_border db(.clock(clk_40MHz), .*); //TODO: fill in
+    draw_border db(.*); //TODO: fill in
 
 //   EightSevenSegmentDisplays ssd(.CLOCK_100(clock_40MHz),
 //                                 .reset,

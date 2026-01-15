@@ -1,7 +1,7 @@
 // `default_nettype none
 
 module draw_border(
-    input logic clock, reset,
+    input logic reset,
     input logic [9:0] row, col,
     output logic [7:0] red, green, blue);
 
@@ -25,10 +25,15 @@ module draw_border(
                          .high(10'd600), .is_between(bottom_h));
 
     always_comb begin
-        if (left_v || right_v || top_h || bottom_h) begin
+        if (left_v | right_v | top_h | bottom_h) begin
             red = 8'hFF;
             green = 8'hFF;
             blue = 8'hFF;
+        end
+        else begin
+            red = 8'h00;
+            green = 8'h00;
+            blue = 8'h00;                                                                                            ;
         end
     end
 
