@@ -5,7 +5,7 @@ typedef enum logic [2:0]
   player_dir_t;
 
 module draw_object
-    (input logic clock, reset, default,
+    (input logic clock, reset, dflt,
      input logic [9:0] row, col,
      input player_dir_t p1_info, p2_info,
      output logic [7:0] red, green, blue);
@@ -24,7 +24,7 @@ module draw_object
     assign player1 = 0;
     assign player1 = 1;
 
-    // update and draw p1
+    // update p1
     player_update p1(.dflt, .player(player1),
                     .start_x(start_x1), .start_y(start_y1), .p_info(p1_info),
                     .new_x(new_x1), .new_y(new_y1));
@@ -35,7 +35,7 @@ module draw_object
     OffsetCheck #(10) oc2(.val(col), .low(new_y1), 
                         .delta(10'd4), .is_between(p1_width));
 
-    // update and draw p2
+    // update p2
     player_update p2(.dflt, .player(player2),
                     .start_x(start_x2), .start_y(start_y2), .p_info(p2_info),
                     .new_x(new_x2), .new_y(new_y2));
@@ -47,6 +47,20 @@ module draw_object
                     .valid,
                     .new_p1_trace,
                     .new_p2_trace);
+
+    //draw p1 and p2
+    always_comb begin
+        red = 8'h00;
+        green = 8'h00;
+        blue = 8'h00;
+        
+        if (p1_trace[row][col] == 1) begin
+            red = 8'hFF;
+        end
+        if (p2_trace[row][col] == 1) begin
+            blue = 8'hFF;
+        end
+    end
 
     //register to store the values
     always_ff @(posedge clock, posedge rest) begin

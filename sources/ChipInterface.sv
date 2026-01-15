@@ -49,10 +49,12 @@ module chipInterface (
 //   draw_ball db(.pad_y(new_pad_y), .reset(BTN_reset), .clock(clk_40MHz),
 //               .red(red_b), .green(green_b), .blue(blue_b), .*);
 //   gameFSM fsm(.clock(clk_40MHz), .reset(BTN_reset), .*);
-  
-    // draw_obj do(); //TODO: fill in the instantiation
 
-    draw_border db(.*); //TODO: fill in
+    logic [7:0] red_o, green_o, blue_o, red_b, green_b, blue_b;
+
+    draw_obj do(.red(red_o), .green(green_o), .blue(blue_o), .*);
+
+    draw_border db(red(red_b), .green(green_b), .blue(blue_b), .*);
 
 //   EightSevenSegmentDisplays ssd(.CLOCK_100(clock_40MHz),
 //                                 .reset,
@@ -83,9 +85,9 @@ module chipInterface (
 //   Comparator #(4) cmp_r(.A(right_score), .B(4'd9), .AeqB(right_win));
 //   Comparator #(4) cmp_l(.A(left_score), .B(4'd9), .AeqB(left_win));
 //   assign game_over = left_win | right_win;  
-//   assign red = red_b | red_p;
-//   assign green = green_b | green_p;
-//   assign blue = blue_b | blue_p;
+  assign red = red_b | red_o;
+  assign green = green_b | green_o;
+  assign blue = blue_b | blue_o;
 
 // Connect signals to the VGA to HDMI converter
 // Make sure you connect your blank signal to the vde input
