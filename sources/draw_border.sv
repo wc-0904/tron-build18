@@ -10,11 +10,11 @@ module draw_border(
 
     //Left vertical
     RangeCheck #(10) rc0(.val(col), .low(10'd0),
-                         .high(10'd4), .is_between(left_v));
+                         .high(10'd104), .is_between(left_v));
 
     //Right vertical
-    RangeCheck #(10) rc1(.val(col), .low(10'd796),
-                         .high(10'd800), .is_between(right_v));
+    RangeCheck #(10) rc1(.val(col), .low(10'd696),
+                         .high(10'd799), .is_between(right_v));
 
     //Top horizontal
     RangeCheck #(10) rc2(.val(row), .low(10'd0),
@@ -22,7 +22,7 @@ module draw_border(
 
     //Bottom horizontal
     RangeCheck #(10) rc3(.val(row), .low(10'd596),
-                         .high(10'd600), .is_between(bottom_h));
+                         .high(10'd599), .is_between(bottom_h));
 
     always_comb begin
         if (left_v | right_v | top_h | bottom_h) begin

@@ -41,51 +41,13 @@ module chipInterface (
   assign p1_info = 3'b000;
   assign p2_info = 3'b001;
 
-//   Register #(4) r1(.en(en_trace), .clear(reset), .clock(clock), 
-//                      .D(p1_info), .Q(p1_info_sync));
-
-                     
-//   draw_paddle dp(.reset(BTN_reset), .clock(clk_40MHz), .red(red_p),
-//                 .green(green_p), .blue(blue_p), .*);
-//   draw_ball db(.pad_y(new_pad_y), .reset(BTN_reset), .clock(clk_40MHz),
-//               .red(red_b), .green(green_b), .blue(blue_b), .*);
-//   gameFSM fsm(.clock(clk_40MHz), .reset(BTN_reset), .*);
-
   logic [7:0] red_o, green_o, blue_o, red_b, green_b, blue_b;
 
-  draw_object dob(.clock(clk_40MHz), .red(red_o), .green(green_o), .blue(blue_o), .*);
+  draw_object dob(.clock(clk_40MHz), .red(red_o), .green(green_o), .blue(blue_o),
+                  .reset(BTN_reset), .*);
 
   draw_border db(.red(red_b), .green(green_b), .blue(blue_b), .*);
 
-//   EightSevenSegmentDisplays ssd(.CLOCK_100(clock_40MHz),
-//                                 .reset,
-//                                 .dec_points('0),
-//                                 .blank(8'b1110_1110),
-//                                 .HEX7('0),
-//                                 .HEX6('0),
-//                                 .HEX5('0),
-//                                 .HEX4(left_score),
-//                                 .HEX3('0),
-//                                 .HEX2('0),
-//                                 .HEX1('0),
-//                                 .HEX0(right_score),
-//                                 .*);
-
-//   // display the flash state
-//   Counter #(7) ct1(.en(count_up & flash_en), .load(0), .D(7'd0), .up(1),
-//                   .clock(clk_40MHz), .clear(count_done), .Q(count_out));
-//   MagComp #(7) mg1(.A(count_out), .B(end_val), 
-//                   .AeqB(AeqB_d), .AgtB(AgtB_d));
-//   assign count_done = AgtB_d | AeqB_d;  
-//   // left score counter
-//   Counter #(4) ct2(.en(score_l), .load(0), .D(4'd0), .up(1), 
-//                   .clock(clk_40MHz), .clear(BTN_reset), .Q(left_score));
-//   Counter #(4) ct3(.en(score_r), .load(0), .D(4'd0), .up(1), 
-//                   .clock(clk_40MHz), .clear(BTN_reset), .Q(right_score));  
-//   // if either left or right wins
-//   Comparator #(4) cmp_r(.A(right_score), .B(4'd9), .AeqB(right_win));
-//   Comparator #(4) cmp_l(.A(left_score), .B(4'd9), .AeqB(left_win));
-//   assign game_over = left_win | right_win;  
   assign red = red_b | red_o;
   assign green = green_b | green_o;
   assign blue = blue_b | blue_o;
