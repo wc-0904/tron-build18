@@ -1,9 +1,6 @@
 // Connects the logic of our game to our chip so that the game can be displayed
 // Allows us to control whether the players are moving up, down, left, right
-typedef enum logic [2:0]
-  {UP = 4'b000, DOWN = 4'b001, LEFT = 4'b010, RIGHT = 4'b011, STOP = 4'b100}
-  player_dir_t;
-  
+
 module chipInterface (
     input  logic        CLOCK_100,
     input  logic [ 3:0] BTN, 
@@ -27,7 +24,10 @@ module chipInterface (
   // Put your vga module here
   logic [9:0] row, col;
   logic [7:0] red, green, blue;
-  logic HS, VS, blank;
+  logic [2:0] p1_info, p2_info;
+  logic HS, VS, blank, BTN_reset, dflt;
+  logic SW_lup, SW_lmove, SW_rup, SW_rmove;
+  
 
   vga VGA(.clock_40MHz(clk_40MHz), .reset, .HS, .VS, .blank, .row, .col);
   
@@ -36,9 +36,10 @@ module chipInterface (
   Synchronizer syn3(.async(SW[0]), .clock(clk_40MHz), .sync(SW_rup));
   Synchronizer syn4(.async(SW[1]), .clock(clk_40MHz), .sync(SW_rmove));
   Synchronizer syn5(.async(BTN[0]), .clock(clk_40MHz), .sync(BTN_reset));
-  Synchronizer syn6(.async(BTN[3]), .clock(clk_40MHz), .sync(serve));
+  // Synchronizer syn6(.async(BTN[3]), .clock(clk_40MHz), .sync(serve));
   
-//   assign pad_info = {SW_lmove, SW_rmove, SW_lup, SW_rup};
+  assign p1_info = 3'b000;
+  assign p2_info = 3'b001;
 
 //   Register #(4) r1(.en(en_trace), .clear(reset), .clock(clock), 
 //                      .D(p1_info), .Q(p1_info_sync));
@@ -50,11 +51,11 @@ module chipInterface (
 //               .red(red_b), .green(green_b), .blue(blue_b), .*);
 //   gameFSM fsm(.clock(clk_40MHz), .reset(BTN_reset), .*);
 
-    logic [7:0] red_o, green_o, blue_o, red_b, green_b, blue_b;
+  logic [7:0] red_o, green_o, blue_o, red_b, green_b, blue_b;
 
-    draw_obj do(.red(red_o), .green(green_o), .blue(blue_o), .*);
+  draw_object dob(.clock(clk_40MHz), .red(red_o), .green(green_o), .blue(blue_o), .*);
 
-    draw_border db(red(red_b), .green(green_b), .blue(blue_b), .*);
+  draw_border db(.red(red_b), .green(green_b), .blue(blue_b), .*);
 
 //   EightSevenSegmentDisplays ssd(.CLOCK_100(clock_40MHz),
 //                                 .reset,

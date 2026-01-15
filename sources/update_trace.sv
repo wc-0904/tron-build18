@@ -1,6 +1,6 @@
-`default_nettype none
+// `default_nettype none
 
-module updateTrace (
+module update_trace (
     input logic [149:0][199:0] p1_trace, p2_trace,
     input logic [9:0] new_x1, new_y1,
     input logic [9:0] new_x2, new_y2,
@@ -21,4 +21,4 @@ module updateTrace (
 
     end
 
-endmodule: updateTrace
+endmodule: update_trace

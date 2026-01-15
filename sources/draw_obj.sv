@@ -1,20 +1,19 @@
-`default_nettype none
-
-typedef enum logic [2:0]
-  {UP = 4'b000, DOWN = 4'b001, LEFT = 4'b010, RIGHT = 4'b011, STOP = 4'b100}
-  player_dir_t;
+// `default_nettype none
+// typedef enum logic [2:0]
+//   {UP = 3'b000, DOWN = 3'b001, LEFT = 3'b010, RIGHT = 3'b011, STOP = 3'b100}
+//   player_dir_t;
 
 module draw_object
     (input logic clock, reset, dflt,
      input logic [9:0] row, col,
-     input player_dir_t p1_info, p2_info,
+     input logic [2:0] p1_info, p2_info,
      output logic [7:0] red, green, blue);
     
     // only update when at bottom right edge of display
-    logic en_cond;
+    logic en_cond, valid, p2_height, p2_width, p1_height, p1_width;
     assign en_cond = (row == 10'd599) && (col == 10'd799);
 
-    logic dflt, player1, player2; // signal to set back to default
+    logic player1, player2; // signal to set back to default
 
     //logic for register to keep track of traces
     logic [149:0][199:0] p1_trace, p2_trace, new_p1_trace, new_p2_trace;
@@ -63,7 +62,7 @@ module draw_object
     end
 
     //register to store the values
-    always_ff @(posedge clock, posedge rest) begin
+    always_ff @(posedge clock) begin
         if (reset) begin
             start_x1 <= 'b0;
             start_y1 <= 'b0;
@@ -95,15 +94,21 @@ module draw_object
 endmodule: draw_object
 
 module player_update
-  (input logic en_cond, clock, reset, dflt, player, 
+  (input logic dflt, player, 
   input logic [9:0] start_x, start_y,
-  input player_dir_t p_info,
+  input logic [2:0] p_info,
   output logic [9:0] new_x, new_y);
+
+  logic [9:0] start_x1;
+  logic [9:0] start_y1;
+  logic [9:0] start_x2;
+  logic [9:0] start_y2;
 
   assign start_x1 = 10'd6;
   assign start_y1 = 10'd594;
   assign start_x2 = 10'd594;
   assign start_y2 = 10'd6;
+//   enum logic [2:0] {UP = 3'b000, DOWN = 3'b001, LEFT = 3'b010, RIGHT = 3'b011, STOP = 3'b100} ;
 
   always_comb begin
     if (dflt)
@@ -113,14 +118,13 @@ module player_update
             {new_x, new_y} = {start_x1, start_y1};
     else begin
         case (p_info)
-            UP: {new_x, new_y} = {start_x, start_y + 10'd2};
-            DOWN: {new_x, new_y} = {start_x, start_y - 10'd2};
-            LEFT: {new_x, new_y} = {start_x - 10'd2, start_y};
-            RIGHT: {new_x, new_y} = {start_x + 10'd2, start_y};
-            STOP: {new_x, new_y} = {start_x, start_y};
+            3'b000: {new_x, new_y} = {start_x, start_y + 10'd2};
+            3'b001: {new_x, new_y} = {start_x, start_y - 10'd2};
+            3'b010: {new_x, new_y} = {start_x - 10'd2, start_y};
+            3'b011: {new_x, new_y} = {start_x + 10'd2, start_y};
+            3'b100: {new_x, new_y} = {start_x, start_y};
             default: {new_x, new_y} = {start_x, start_y};
         endcase
-
     end
   end
 

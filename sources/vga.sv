@@ -8,7 +8,7 @@ module vga
   logic v_disp, h_disp;
   logic v_end, h_end;
   logic [9:0]v_line;
-  logic r_en;
+  logic r_en, hct_cond, vline_cond;
   logic h_sync, v_sync;
 
   // hCount counter (counts individual clock cycles)
