@@ -1,5 +1,9 @@
 // Connects the logic of our game to our chip so that the game can be displayed
 // Allows us to control whether the players are moving up, down, left, right
+typedef enum logic [2:0]
+  {UP = 4'b000, DOWN = 4'b001, LEFT = 4'b010, RIGHT = 4'b011, STOP = 4'b100}
+  player_dir_t;
+  
 module chipInterface (
     input  logic        CLOCK_100,
     input  logic [ 3:0] BTN, 
