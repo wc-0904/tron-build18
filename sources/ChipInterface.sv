@@ -24,22 +24,28 @@ module chipInterface (
   // Put your vga module here
   logic [9:0] row, col;
   logic [7:0] red, green, blue;
-  logic [2:0] p1_info, p2_info;
+  logic [3:0] p1_info, p2_info;
   logic HS, VS, blank, BTN_reset, dflt;
-  logic SW_lup, SW_lmove, SW_rup, SW_rmove;
+  logic p1_bit0, p1_bit1, p1_bit2, p1_bit3,
+        p2_bit0, p2_bit1, p2_bit2, p2_bit3;
   
 
   vga VGA(.clock_40MHz(clk_40MHz), .reset, .HS, .VS, .blank, .row, .col);
   
-  Synchronizer syn1(.async(SW[15]), .clock(clk_40MHz), .sync(SW_lup));
-  Synchronizer syn2(.async(SW[14]), .clock(clk_40MHz), .sync(SW_lmove));
-  Synchronizer syn3(.async(SW[0]), .clock(clk_40MHz), .sync(SW_rup));
-  Synchronizer syn4(.async(SW[1]), .clock(clk_40MHz), .sync(SW_rmove));
-  Synchronizer syn5(.async(BTN[0]), .clock(clk_40MHz), .sync(BTN_reset));
+  Synchronizer syn1(.async(SW[15]), .clock(clk_40MHz), .sync(p1_bit3));
+  Synchronizer syn2(.async(SW[14]), .clock(clk_40MHz), .sync(p1_bit2));
+  Synchronizer syn3(.async(SW[13]), .clock(clk_40MHz), .sync(p1_bit1));
+  Synchronizer syn4(.async(SW[12]), .clock(clk_40MHz), .sync(p1_bit0));
+  Synchronizer syn5(.async(SW[3]), .clock(clk_40MHz), .sync(p2_bit3));
+  Synchronizer syn6(.async(SW[2]), .clock(clk_40MHz), .sync(p2_bit2));
+  Synchronizer syn7(.async(SW[1]), .clock(clk_40MHz), .sync(p2_bit1));
+  Synchronizer syn8(.async(SW[0]), .clock(clk_40MHz), .sync(p2_bit0));
+  
+  Synchronizer syn9(.async(BTN[0]), .clock(clk_40MHz), .sync(BTN_reset));
   // Synchronizer syn6(.async(BTN[3]), .clock(clk_40MHz), .sync(serve));
   
-  assign p1_info = 3'b000;
-  assign p2_info = 3'b001;
+  assign p1_info = {p1_bit3, p1_bit2, p1_bit1, p1_bit0};
+  assign p2_info = {p2_bit3, p2_bit2, p2_bit1, p2_bit0};
 
   logic [7:0] red_o, green_o, blue_o, red_b, green_b, blue_b;
 
