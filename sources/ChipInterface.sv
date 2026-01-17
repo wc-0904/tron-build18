@@ -52,9 +52,9 @@ module chipInterface (
   draw_object dob(.clock(clk_40MHz), .red(red_o), .green(green_o), .blue(blue_o),
                   .reset(BTN_reset), .en_cond, .*);
 
-  assign red = red_t;
-  assign green = green_t;
-  assign blue = blue_t;
+  assign red = red_t | red_o;
+  assign green = green_t | green_o;
+  assign blue = blue_t | blue_o;
 
   logic p1_bit3, p1_bit2, p1_bit1, p1_bit0,
         p2_bit3, p2_bit2, p2_bit1, p2_bit0;
@@ -348,4 +348,3 @@ module SSDCounter #(
   end
 
 endmodule : SSDCounter
-

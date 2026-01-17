@@ -13,7 +13,7 @@ module draw_trace(
     logic trace; //bool to see if trace is there
 
     always_comb begin
-        addra = {9'd0,new_x1} * 19'd799 + {9'd0,new_y1};
+        addra = {9'd0, new_y1} * 19'd799 + {9'd0, new_x1};
         addrb = {9'd0,row} * 19'd799 + {9'd0,col};
     end
 
@@ -22,8 +22,8 @@ module draw_trace(
     
     always_comb begin
         if (trace) begin
-            red = 8'hFF;
-            green = 8'hFF;
+            red = 8'h00;
+            green = 8'h00;
             blue = 8'hFF;
         end
         else begin
