@@ -1,34 +1,37 @@
 // `default_nettype none
+// typedef enum logic [2:0]
+//   {UP = 3'b000, DOWN = 3'b001, LEFT = 3'b010, RIGHT = 3'b011, STOP = 3'b100}
+//   player_dir_t;
 
 module draw_object
     (input logic clock, reset, dflt,
      input logic [9:0] row, col,
-     input logic [3:0] p1_info, p2_info,
+     input logic [2:0] p1_info, p2_info,
      output logic [7:0] red, green, blue);
     
     // only update when at bottom right edge of display
-    logic en_cond, valid, //p2_height, p2_width, p1_height, p1_width,
+    logic en_cond, // valid, p2_height, p2_width, p1_height, p1_width,
         p1_h, p1_v, p2_h, p2_v;
 
     assign en_cond = (row == 10'd599) && (col == 10'd799);
     
     logic player1, player2; // signal to set back to default
     
-    logic [9:0] player_size, border_offset; // game defaults
+    logic [9:0] player_size; // player size
+
     assign player_size = 10'd8;
-    assign border_offset = 10'd100;
 
 
     //logic for register to keep track of traces
-    logic [74:0][74:0] p1_trace, p2_trace, new_p1_trace, new_p2_trace;
+    // logic [149:0][199:0] p1_trace, p2_trace, new_p1_trace, new_p2_trace;
     logic [9:0] new_x1, new_x2, new_y1, new_y2;
     logic [9:0] start_x1, start_x2, start_y1, start_y2;
 
     assign player1 = 0;
-    assign player2 = 1;
+    assign player1 = 1;
 
     // update p1
-    player_update p1(.dflt, .border_offset, .player(player1),
+    player_update p1(.dflt, .player(player1),
                     .start_x(start_x1), .start_y(start_y1), .p_info(p1_info),
                     .new_x(new_x1), .new_y(new_y1));
 
@@ -44,12 +47,12 @@ module draw_object
                     .new_x(new_x2), .new_y(new_y2));
     
     //update the traces
-    update_trace u1(.p1_trace, .p2_trace, 
-                    .new_x1, .new_y1,
-                    .new_x2, .new_y2,
-                    .valid,
-                    .new_p1_trace,
-                    .new_p2_trace);
+    // update_trace u1(.p1_trace, .p2_trace, 
+    //                 .new_x1, .new_y1,
+    //                 .new_x2, .new_y2,
+    //                 .valid,
+    //                 .new_p1_trace,
+    //                 .new_p2_trace);
 
     //draw p1 and p2
     // always_comb begin
@@ -90,20 +93,20 @@ module draw_object
     //register to store the values
     always_ff @(posedge clock) begin
         if (reset) begin
-            start_x1 <= 10'd16 + border_offset; // 'd0?
+            start_x1 <= 10'd16; // 'd0?
             start_y1 <= 10'd575;
-            start_x2 <= 10'd775 - border_offset;
+            start_x2 <= 10'd775;
             start_y2 <= 10'd16;
-            p1_trace <= 'b0;
-            p2_trace <= 'b0;
+            // p1_trace <= 'b0;
+            // p2_trace <= 'b0;
         end
         if (en_cond) begin //if (en_cond & valid) begin
             start_x1 <= new_x1;
             start_y1 <= new_y1;
             start_x2 <= new_x2;
             start_y2 <= new_y2;
-            p1_trace <= new_p1_trace;
-            p2_trace <= new_p2_trace;
+            // p1_trace <= new_p1_trace;
+            // p2_trace <= new_p2_trace;
         end
 
     end
@@ -121,8 +124,8 @@ endmodule: draw_object
 
 module player_update
   (input logic dflt, player, 
-  input logic [9:0] start_x, start_y, border_offset,
-  input logic [3:0] p_info,
+  input logic [9:0] start_x, start_y,
+  input logic [2:0] p_info,
   output logic [9:0] new_x, new_y);
 
   logic [9:0] start_x1;
@@ -130,9 +133,9 @@ module player_update
   logic [9:0] start_x2;
   logic [9:0] start_y2;
 
-  assign start_x1 = 10'd16 + border_offset; // 'd0?
+  assign start_x1 = 10'd16; // 'd0?
   assign start_y1 = 10'd575;
-  assign start_x2 = 10'd775 - border_offset;
+  assign start_x2 = 10'd775;
   assign start_y2 = 10'd16;
 //   enum logic [2:0] {UP = 3'b000, DOWN = 3'b001, LEFT = 3'b010, RIGHT = 3'b011, STOP = 3'b100} ;
 
@@ -144,11 +147,11 @@ module player_update
             {new_x, new_y} = {start_x1, start_y1};
     else begin
         case (p_info)
-            4'b0001: {new_x, new_y} = {start_x, start_y - 10'd2};
-            4'b0010: {new_x, new_y} = {start_x, start_y + 10'd2};
-            4'b0100: {new_x, new_y} = {start_x - 10'd2, start_y};
-            4'b1000: {new_x, new_y} = {start_x + 10'd2, start_y};
-            // 4'b1001: {new_x, new_y} = {start_x, start_y};
+            3'b000: {new_x, new_y} = {start_x, start_y - 10'd2};
+            3'b001: {new_x, new_y} = {start_x, start_y + 10'd2};
+            3'b010: {new_x, new_y} = {start_x - 10'd2, start_y};
+            3'b011: {new_x, new_y} = {start_x + 10'd2, start_y};
+            3'b100: {new_x, new_y} = {start_x, start_y};
             default: {new_x, new_y} = {start_x, start_y};
         endcase
     end
