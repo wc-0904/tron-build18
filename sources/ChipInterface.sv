@@ -35,7 +35,7 @@ module chipInterface (
 //   Synchronizer syn2(.async(SW[14]), .clock(clk_40MHz), .sync(SW_lmove));
 //   Synchronizer syn3(.async(SW[0]), .clock(clk_40MHz), .sync(SW_rup));
 //   Synchronizer syn4(.async(SW[1]), .clock(clk_40MHz), .sync(SW_rmove));
-//   Synchronizer syn5(.async(BTN[0]), .clock(clk_40MHz), .sync(BTN_reset));
+  Synchronizer syn10(.async(BTN[0]), .clock(clk_40MHz), .sync(BTN_reset));
   // Synchronizer syn6(.async(BTN[3]), .clock(clk_40MHz), .sync(serve));
   
 //   assign p1_info = 3'b000;
@@ -46,7 +46,7 @@ module chipInterface (
   logic en_cond;
   logic [9:0] new_x1, new_x2, new_y1, new_y2;
 
-  draw_trace dt(.reset(BTN_reset), .clock(clk_40MHz), .row, .col,
+  draw_trace dt(.reset(BTN_reset), .clock(clk_40MHz), .row, .col, 
                 .red(red_t), .green(green_t), .blue(blue_t), .en_cond, .*);
 
   draw_object dob(.clock(clk_40MHz), .red(red_o), .green(green_o), .blue(blue_o),
