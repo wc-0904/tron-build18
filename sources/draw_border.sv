@@ -28,10 +28,10 @@ module draw_trace(
         addrb = {9'd0,row} * 19'd799 + {9'd0,col};
     end
 
-    grid_mem mem1(.clka(clock), .addra(addra1), .dina(dina), .wea(1'b1), .ena(en_cond),
+    grid_mem mem1(.clka(clock), .addra(addra1), .dina(dina), .wea(1'b1), .ena(en_cond || reset),
                  .clkb(clock), .addrb(addrb), .doutb(trace1));
     
-    grid_mem mem2(.clka(clock), .addra(addra2), .dina(dina), .wea(1'b1), .ena(en_cond),
+    grid_mem mem2(.clka(clock), .addra(addra2), .dina(dina), .wea(1'b1), .ena(en_cond || reset),
                  .clkb(clock), .addrb(addrb), .doutb(trace2));
     
     always_comb begin
