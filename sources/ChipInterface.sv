@@ -45,9 +45,11 @@ module chipInterface (
   logic [7:0] red_t, green_t, blue_t;
   logic en_cond;
   logic [9:0] new_x1, new_x2, new_y1, new_y2;
+  logic collided;
 
   draw_trace dt(.reset(BTN_reset), .clock(clk_40MHz), .row, .col, 
-                .red(red_t), .green(green_t), .blue(blue_t), .en_cond, .*);
+                .red(red_t), .green(green_t), .blue(blue_t), .en_cond, 
+                .collided, .*);
 
   draw_object dob(.clock(clk_40MHz), .red(red_o), .green(green_o), .blue(blue_o),
                   .reset(BTN_reset), .en_cond, .*);
@@ -68,8 +70,16 @@ module chipInterface (
   Synchronizer syn7(.async(SW[1]), .clock(clk_40MHz), .sync(p2_bit1));
   Synchronizer syn8(.async(SW[0]), .clock(clk_40MHz), .sync(p2_bit0));
 
-  assign p1_info = {p1_bit3, p1_bit2, p1_bit1, p1_bit0};
-  assign p2_info = {p2_bit3, p2_bit2, p2_bit1, p2_bit0};
+  always_comb begin
+    if (collided) begin
+        p1_info = 4'b0;
+        p2_info = 4'b0;
+    end
+    else begin
+        p1_info = {p1_bit3, p1_bit2, p1_bit1, p1_bit0};
+        p2_info = {p2_bit3, p2_bit2, p2_bit1, p2_bit0};
+    end
+  end
 
 // Connect signals to the VGA to HDMI converter
 // Make sure you connect your blank signal to the vde input
