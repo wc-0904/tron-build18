@@ -126,22 +126,29 @@ set_property PULLDOWN true [get_ports PD1]
 
 set_property PACKAGE_PIN N5 [get_ports {PD2}]
 set_property IOSTANDARD LVCMOS33 [get_ports {PD2}]
+set_property PULLDOWN true [get_ports PD2]
 
 set_property PACKAGE_PIN T3 [get_ports {PD3}]
 set_property IOSTANDARD LVCMOS33 [get_ports {PD3}]
+set_property PULLDOWN true [get_ports PD3]
 
 set_property PACKAGE_PIN R4 [get_ports {PD4}]
 set_property IOSTANDARD LVCMOS33 [get_ports {PD4}]
+set_property PULLDOWN true [get_ports PD4]
 
 set_property PACKAGE_PIN L4 [get_ports {PD7}]
 set_property IOSTANDARD LVCMOS33 [get_ports {PD7}]
+set_property PULLDOWN true [get_ports PD5]
 
 set_property PACKAGE_PIN K4 [get_ports {PD8}]
 set_property IOSTANDARD LVCMOS33 [get_ports {PD8}]
+set_property PULLDOWN true [get_ports PD6]
 
 set_property PACKAGE_PIN M4 [get_ports {PD9}]
 set_property IOSTANDARD LVCMOS33 [get_ports {PD9}]
+set_property PULLDOWN true [get_ports PD7]
 
 set_property PACKAGE_PIN L5 [get_ports {PD10}]
-set_property IOSTANDARD LVCMOS33 [get_ports {PD10}
+set_property IOSTANDARD LVCMOS33 [get_ports {PD10}]
+set_property PULLDOWN true [get_ports PD8]
 
