@@ -7,7 +7,7 @@ module draw_trace(
     input logic en_cond,
     output logic [7:0] red, green, blue);
 
-    logic [18:0] addra1, addra2, addrb;
+    logic [16:0] addra1, addra2, addrb;
     logic ena;
     logic dina;
 
@@ -16,21 +16,23 @@ module draw_trace(
     always_comb begin
         if (reset) begin
             dina = 1'b0;
-            addra1 = {9'd0,row} * 19'd799 + {9'd0,col};
-            addra2 = {9'd0,row} * 19'd799 + {9'd0,col};
+            addra1 = {7'd0,(row >> 2)} * 17'd399 + {7'd0,(col >> 2)};
+            addra2 = {7'd0,(row >> 2)} * 17'd399 + {7'd0,(col >> 2)};
         end
         else begin 
             dina = 1'b1;
-            addra1 = {9'd0, new_y1} * 19'd799 + {9'd0, new_x1};
-            addra2 = {9'd0, new_y2} * 19'd799 + {9'd0, new_x2};
+            addra1 = {7'd0, (new_y1 >> 2)} * 17'd399 + {7'd0, (new_x1 >> 2)};
+            addra2 = {7'd0, (new_y2 >> 2)} * 17'd399 + {7'd0, (new_x2 >> 2)};
         end
     
-        addrb = {9'd0,row} * 19'd799 + {9'd0,col};
+        addrb = {7'd0,(row >> 2)} * 17'd399 + {7'd0,(col >> 2)};
     end
 
+    //Player 1
     grid_mem mem1(.clka(clock), .addra(addra1), .dina(dina), .wea(1'b1), .ena(en_cond || reset),
                  .clkb(clock), .addrb(addrb), .doutb(trace1));
     
+    //Player 2
     grid_mem mem2(.clka(clock), .addra(addra2), .dina(dina), .wea(1'b1), .ena(en_cond || reset),
                  .clkb(clock), .addrb(addrb), .doutb(trace2));
     
