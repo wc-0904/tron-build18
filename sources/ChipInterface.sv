@@ -5,6 +5,8 @@ module chipInterface (
     input  logic        CLOCK_100,
     input  logic [ 3:0] BTN, 
     input  logic [15:0] SW,
+    input  logic PD1, PD2, PD3, PD4,
+    output logic [15:0] LD,
     output logic [ 3:0] D2_AN, D1_AN,
     output logic [ 7:0] D2_SEG, D1_SEG,
     output logic        hdmi_clk_n, hdmi_clk_p,
@@ -35,7 +37,6 @@ module chipInterface (
 //   Synchronizer syn2(.async(SW[14]), .clock(clk_40MHz), .sync(SW_lmove));
 //   Synchronizer syn3(.async(SW[0]), .clock(clk_40MHz), .sync(SW_rup));
 //   Synchronizer syn4(.async(SW[1]), .clock(clk_40MHz), .sync(SW_rmove));
-  Synchronizer syn10(.async(BTN[0]), .clock(clk_40MHz), .sync(BTN_reset));
   // Synchronizer syn6(.async(BTN[3]), .clock(clk_40MHz), .sync(serve));
   
 //   assign p1_info = 3'b000;
@@ -46,6 +47,7 @@ module chipInterface (
   logic en_cond;
   logic [9:0] new_x1, new_x2, new_y1, new_y2;
   logic collided;
+  logic pd[3:0];
 
   draw_trace dt(.reset(BTN_reset), .clock(clk_40MHz), .row, .col, 
                 .red(red_t), .green(green_t), .blue(blue_t), .en_cond, 
@@ -59,8 +61,10 @@ module chipInterface (
   assign blue = blue_t;
 
   logic p1_bit3, p1_bit2, p1_bit1, p1_bit0,
-        p2_bit3, p2_bit2, p2_bit1, p2_bit0;
+        p2_bit3, p2_bit2, p2_bit1, p2_bit0,
+        pd1_sync, pd2_sync, pd3_sync, pd4_sync;
 
+  // Switch inputs
   Synchronizer syn1(.async(SW[15]), .clock(clk_40MHz), .sync(p1_bit3));
   Synchronizer syn2(.async(SW[14]), .clock(clk_40MHz), .sync(p1_bit2));
   Synchronizer syn3(.async(SW[13]), .clock(clk_40MHz), .sync(p1_bit1));
@@ -70,13 +74,28 @@ module chipInterface (
   Synchronizer syn7(.async(SW[1]), .clock(clk_40MHz), .sync(p2_bit1));
   Synchronizer syn8(.async(SW[0]), .clock(clk_40MHz), .sync(p2_bit0));
 
+  // PMOD D I/O
+  Synchronizer syn9(.async(PD1), .clock(clk_40MHz), .sync(pd1_sync));
+  Synchronizer syn10(.async(PD2), .clock(clk_40MHz), .sync(pd2_sync));
+  Synchronizer syn11(.async(PD3), .clock(clk_40MHz), .sync(pd3_sync));
+  Synchronizer syn12(.async(PD4), .clock(clk_40MHz), .sync(pd4_sync));
+  // assign pd = {pd4_sync, pd3_sync, pd2_sync, pd1_sync};
+
+  // I/O Test
+  gpio_test gt(.led(LD[3:0]), .pd_port({pd4_sync, pd3_sync, pd2_sync, pd1_sync}));
+
+  // Reset button
+  Synchronizer syn13(.async(BTN[0]), .clock(clk_40MHz), .sync(BTN_reset));
+
+  // Player 1 and 2 Movement Connections
   always_comb begin
     if (collided) begin
         p1_info = 4'b0;
         p2_info = 4'b0;
     end
     else begin
-        p1_info = {p1_bit3, p1_bit2, p1_bit1, p1_bit0};
+        // p1_info = {p1_bit3, p1_bit2, p1_bit1, p1_bit0};
+        p1_info = {pd1_sync, pd3_sync, pd4_sync, pd2_sync};
         p2_info = {p2_bit3, p2_bit2, p2_bit1, p2_bit0};
     end
   end
