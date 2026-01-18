@@ -5,7 +5,7 @@ module chipInterface (
     input  logic        CLOCK_100,
     input  logic [ 3:0] BTN, 
     input  logic [15:0] SW,
-    input  logic PD1, PD2, PD3, PD4,
+    input  logic PD1, PD2, PD3, PD4, PD5, PD6, PD7, PD8,
     output logic [15:0] LD,
     output logic [ 3:0] D2_AN, D1_AN,
     output logic [ 7:0] D2_SEG, D1_SEG,
@@ -49,6 +49,61 @@ module chipInterface (
   logic collided;
   logic pd[3:0];
 
+  always_comb begin
+    case ({pd1_sync, pd3_sync, pd4_sync, pd2_sync})
+        4'b0001: en_update1 = 1'b1; // left
+        4'b0010: en_update1 = 1'b1; //right
+        4'b0100: en_update1 = 1'b1; //up
+        4'b1000: en_update1 = 1'b1; //down
+        default: begin
+            en_update1 = 1'b0;
+        end
+    endcase
+
+    case ({pd5_sync, pd7_sync, pd8_sync, pd6_sync})
+        4'b0001: en_update2 = 1'b1; // left
+        4'b0010: en_update2 = 1'b1; //right
+        4'b0100: en_update2 = 1'b1; //up
+        4'b1000: en_update2 = 1'b1; //down
+        default: begin
+            en_update2 = 1'b0;
+        end
+    endcase
+  end
+
+  always_ff @(posedge clk_40MHz) begin
+    if (BTN_reset || reset) begin
+      p1_info <= 4'b0001;
+      p2_info <= 4'b0010;
+    end
+    if (collided) begin
+      p1_info <= 4'b0000;
+      p2_info <= 4'b0000;
+    end
+    
+    else if (en_update1) begin
+      p1_info <= {pd1_sync, pd3_sync, pd4_sync, pd2_sync};
+    end
+    else if (en_update2) begin
+      p2_info = {pd5_sync, pd7_sync, pd8_sync, pd6_sync};
+    end
+  end
+
+
+  // Player 1 and 2 Movement Connections
+  // always_comb begin
+  //   if (collided) begin
+  //       p1_info = 4'b0;
+  //       p2_info = 4'b0;
+  //   end
+  //   // else begin
+  //   //     // p1_info = {p1_bit3, p1_bit2, p1_bit1, p1_bit0};
+  //   //     p1_info = {pd1_sync, pd3_sync, pd4_sync, pd2_sync};
+  //   //     // p2_info = {p2_bit3, p2_bit2, p2_bit1, p2_bit0};
+  //   //     p2_info = {pd5_sync, pd7_sync, pd8_sync, pd6_sync};
+  //   // end
+  // end
+
   draw_trace dt(.reset(BTN_reset), .clock(clk_40MHz), .row, .col, 
                 .red(red_t), .green(green_t), .blue(blue_t), .en_cond, 
                 .collided, .*);
@@ -62,7 +117,8 @@ module chipInterface (
 
   logic p1_bit3, p1_bit2, p1_bit1, p1_bit0,
         p2_bit3, p2_bit2, p2_bit1, p2_bit0,
-        pd1_sync, pd2_sync, pd3_sync, pd4_sync;
+        pd1_sync, pd2_sync, pd3_sync, pd4_sync,
+        pd5_sync, pd6_sync, pd7_sync, pd8_sync;
 
   // Switch inputs
   Synchronizer syn1(.async(SW[15]), .clock(clk_40MHz), .sync(p1_bit3));
@@ -79,26 +135,20 @@ module chipInterface (
   Synchronizer syn10(.async(PD2), .clock(clk_40MHz), .sync(pd2_sync));
   Synchronizer syn11(.async(PD3), .clock(clk_40MHz), .sync(pd3_sync));
   Synchronizer syn12(.async(PD4), .clock(clk_40MHz), .sync(pd4_sync));
+  Synchronizer syn13(.async(PD5), .clock(clk_40MHz), .sync(pd5_sync));
+  Synchronizer syn14(.async(PD6), .clock(clk_40MHz), .sync(pd6_sync));
+  Synchronizer syn15(.async(PD7), .clock(clk_40MHz), .sync(pd7_sync));
+  Synchronizer syn16(.async(PD8), .clock(clk_40MHz), .sync(pd8_sync));
   // assign pd = {pd4_sync, pd3_sync, pd2_sync, pd1_sync};
 
   // I/O Test
-  gpio_test gt(.led(LD[3:0]), .pd_port({pd4_sync, pd3_sync, pd2_sync, pd1_sync}));
+  gpio_test gt(.led(LD[7:0]), .pd_port({pd4_sync, pd3_sync, pd2_sync, pd1_sync,
+                                        pd8_sync, pd7_sync, pd6_sync, pd5_sync}));
 
   // Reset button
-  Synchronizer syn13(.async(BTN[0]), .clock(clk_40MHz), .sync(BTN_reset));
+  Synchronizer syn17(.async(BTN[0]), .clock(clk_40MHz), .sync(BTN_reset));
 
-  // Player 1 and 2 Movement Connections
-  always_comb begin
-    if (collided) begin
-        p1_info = 4'b0;
-        p2_info = 4'b0;
-    end
-    else begin
-        // p1_info = {p1_bit3, p1_bit2, p1_bit1, p1_bit0};
-        p1_info = {pd1_sync, pd3_sync, pd4_sync, pd2_sync};
-        p2_info = {p2_bit3, p2_bit2, p2_bit1, p2_bit0};
-    end
-  end
+  logic en_update1, en_update2;
 
 // Connect signals to the VGA to HDMI converter
 // Make sure you connect your blank signal to the vde input
@@ -136,13 +186,13 @@ module chipInterface (
     logic [6:0] h0, h1, h2, h3, h4, h5, h6, h7;
     logic [6:0] HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0;
 
-    BCDtoSevenSegment b0(.bcd(new_x1[3:0]), .segment(h0)),
-                    b1(.bcd(new_x1[7:4]), .segment(h1)),
-                    b2(.bcd(new_x1[9:8]), .segment(h2)),
-                    b3(.bcd('b0), .segment(h3)),
-                    b4(.bcd(new_y1[3:0]), .segment(h4)),
-                    b5(.bcd(new_y1[7:4]), .segment(h5)),
-                    b6(.bcd(new_y1[9:8]), .segment(h6)),
+    BCDtoSevenSegment b0(.bcd(p1_info[3:0]), .segment(h0)),
+                    b1(.bcd({3'b0,en_update1}), .segment(h1)),
+                    b2(.bcd(p2_info[3:0]), .segment(h2)),
+                    b3(.bcd({3'b0, en_update2}), .segment(h3)),
+                    b4(.bcd('b0), .segment(h4)),
+                    b5(.bcd('b0), .segment(h5)),
+                    b6(.bcd('b0), .segment(h6)),
                     b7(.bcd('b0), .segment(h7));
     
     SSegDisplayDriver ssd(.dpoints(8'b0), .reset(1'b0), .clk(CLOCK_100), .*);

@@ -133,7 +133,9 @@ module player_update
             4'b0010: {update_x, update_y} = {start_x, start_y + 10'd1}; //right
             4'b0100: {update_x, update_y} = {start_x - 10'd1, start_y}; //up
             4'b1000: {update_x, update_y} = {start_x + 10'd1, start_y}; //down
-            default: {update_x, update_y} = {start_x, start_y};
+            default: begin
+                {update_x, update_y} = {start_x, start_y};
+            end
         endcase
     end
 
