@@ -36,19 +36,19 @@ module draw_trace(
     end
 
     //Player 1
-    grid_mem mem1a(.clka(clock), .addra(addra1), .dina(dina), .wea(1'b1), .ena(en_cond || reset),
+    grid_mem mem1a(.clka(clock), .addra(addra1), .dina(dina), .wea(1'b1), .enb(1'b1), .ena(en_cond || reset),
                   .clkb(clock), .addrb(addrb), .doutb(trace1));
 
     //memory to determine if player2 collided with player1
-    grid_mem mem1b(.clka(clock), .addra(addra1), .dina(dina), .wea(1'b1), .ena(en_cond || reset),
+    grid_mem mem1b(.clka(clock), .addra(addra1), .dina(dina), .wea(1'b1), .enb(1'b1), .ena(en_cond || reset),
                   .clkb(clock), .addrb(addra2), .doutb(collision2));
     
     //Player 2
-    grid_mem mem2a(.clka(clock), .addra(addra2), .dina(dina), .wea(1'b1), .ena(en_cond || reset),
+    grid_mem mem2a(.clka(clock), .addra(addra2), .dina(dina), .wea(1'b1), .enb(1'b1), .ena(en_cond || reset),
                    .clkb(clock), .addrb(addrb), .doutb(trace2));
 
     //memory to determine if player1 collided with player2
-    grid_mem mem2b(.clka(clock), .addra(addra2), .dina(dina), .wea(1'b1), .ena(en_cond || reset),
+    grid_mem mem2b(.clka(clock), .addra(addra2), .dina(dina), .wea(1'b1), .enb(1'b1), .ena(en_cond || reset),
                    .clkb(clock), .addrb(addra1), .doutb(collision1));
     
     always_comb begin

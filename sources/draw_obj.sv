@@ -30,7 +30,7 @@ module draw_object
     logic [9:0] start_x1, start_x2, start_y1, start_y2;
 
     assign player1 = 0;
-    assign player1 = 1;
+    assign player2 = 1;
 
     //register to store the values
     always_ff @(posedge clock) begin

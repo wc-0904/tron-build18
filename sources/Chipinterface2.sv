@@ -25,7 +25,7 @@ module chipInterface (
   logic [9:0] row, col;
   logic HS_raw, VS_raw, blank_raw, dflt;
   logic p1_bit3, p1_bit2, p1_bit1, p1_bit0,
-        p2_bit3, p2_bit2, p2_bit1, p2_bit0,
+        p2_bit3, p2_bit2, p2_bit1, p2_bit0;
 
   Synchronizer syn1(.async(SW[15]), .clock(clk_40MHz), .sync(p1_bit3));
   Synchronizer syn2(.async(SW[14]), .clock(clk_40MHz), .sync(p1_bit2));

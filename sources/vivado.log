@@ -1,0 +1,1885 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat Jun 20 06:26:47 2026
+# Process ID         : 16536
+# Current directory  : /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources
+# Command line       : vivado
+# Log file           : /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/vivado.log
+# Journal file       : /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/vivado.jou
+# Running On         : hh-1305-26.lan.local.cmu.edu
+# Platform           : RedHatEnterprise
+# Operating System   : Red Hat Enterprise Linux release 8.10 (Ootpa)
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700
+# CPU Frequency      : 2100.000 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 20
+# Host memory        : 33109 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 50289 MB
+# Available Virtual  : 43316 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+create_project tron /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron -part xc7s50csga324-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/ip'.
+set_property simulator_language Verilog [current_project]
+add_files -norecurse {/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/update_trace.sv /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_p1.sv /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/vga.sv /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/components.sv /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv}
+add_files -fileset constrs_1 -norecurse /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/constraints/Boolean240.xdc
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -top chipInterface -part xc7s50csga324-1 -lint 
+Command: synth_design -top chipInterface -part xc7s50csga324-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17856
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'source' was cancelled
+INFO: [Common 17-83] Releasing license: Synthesis
+7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+INFO: [Common 17-344] 'synth_design' was cancelled
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0
+set_property -dict [list \
+  CONFIG.CLKOUT1_JITTER {159.371} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {40.000} \
+  CONFIG.CLKOUT2_JITTER {114.829} \
+  CONFIG.CLKOUT2_PHASE_ERROR {98.575} \
+  CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200.000} \
+  CONFIG.CLKOUT2_USED {true} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {25.000} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {5} \
+  CONFIG.NUM_OUT_CLKS {2} \
+] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0
+export_ip_user_files -of_objects [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs clk_wiz_0_synth_1 -jobs 20
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0
+[Sat Jun 20 06:38:37 2026] Launched clk_wiz_0_synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/clk_wiz_0_synth_1/runme.log
+INFO: [Vivado 12-4357] Exporting simulation files for 'clk_wiz_0'... please wait for 'clk_wiz_0_synth_1' run to finish...
+wait_on_run clk_wiz_0_synth_1
+[Sat Jun 20 06:38:37 2026] Waiting for clk_wiz_0_synth_1 to finish...
+[Sat Jun 20 06:38:42 2026] Waiting for clk_wiz_0_synth_1 to finish...
+[Sat Jun 20 06:38:47 2026] Waiting for clk_wiz_0_synth_1 to finish...
+[Sat Jun 20 06:38:52 2026] Waiting for clk_wiz_0_synth_1 to finish...
+[Sat Jun 20 06:39:02 2026] Waiting for clk_wiz_0_synth_1 to finish...
+[Sat Jun 20 06:39:12 2026] Waiting for clk_wiz_0_synth_1 to finish...
+[Sat Jun 20 06:39:22 2026] Waiting for clk_wiz_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log clk_wiz_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Jun 20 06:38:39 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source clk_wiz_0.tcl -notrace
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0
+Command: synth_design -top clk_wiz_0 -part xc7s50csga324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22675
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2135.609 ; gain = 419.711 ; free physical = 16589 ; free virtual = 38029
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v:66]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:66]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:75825]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:75825]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84588]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 25.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 5 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84588]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v:66]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2208.578 ; gain = 492.680 ; free physical = 16502 ; free virtual = 37947
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2223.422 ; gain = 507.523 ; free physical = 16508 ; free virtual = 37953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2223.422 ; gain = 507.523 ; free physical = 16508 ; free virtual = 37953
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2229.359 ; gain = 0.000 ; free physical = 16504 ; free virtual = 37949
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'inst'
+Finished Parsing XDC File [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'inst'
+Parsing XDC File [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'inst'
+Finished Parsing XDC File [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/clk_wiz_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/clk_wiz_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/clk_wiz_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/clk_wiz_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2296.359 ; gain = 0.000 ; free physical = 16471 ; free virtual = 37942
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2296.359 ; gain = 0.000 ; free physical = 16472 ; free virtual = 37944
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2296.359 ; gain = 580.461 ; free physical = 16470 ; free virtual = 37943
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2304.363 ; gain = 588.465 ; free physical = 16470 ; free virtual = 37943
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property keep_hierarchy = soft for inst. (constraint file  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc, line 53).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/clk_wiz_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2304.363 ; gain = 588.465 ; free physical = 16470 ; free virtual = 37943
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2304.363 ; gain = 588.465 ; free physical = 16469 ; free virtual = 37943
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2304.363 ; gain = 588.465 ; free physical = 16467 ; free virtual = 37941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2385.363 ; gain = 669.465 ; free physical = 16398 ; free virtual = 37886
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2385.363 ; gain = 669.465 ; free physical = 16398 ; free virtual = 37886
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2394.379 ; gain = 678.480 ; free physical = 16389 ; free virtual = 37877
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2556.191 ; gain = 840.293 ; free physical = 16233 ; free virtual = 37721
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2556.191 ; gain = 840.293 ; free physical = 16233 ; free virtual = 37721
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2556.191 ; gain = 840.293 ; free physical = 16232 ; free virtual = 37720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2556.191 ; gain = 840.293 ; free physical = 16232 ; free virtual = 37720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2556.191 ; gain = 840.293 ; free physical = 16232 ; free virtual = 37720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2556.191 ; gain = 840.293 ; free physical = 16232 ; free virtual = 37720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     3|
+|2     |MMCME2_ADV |     1|
+|3     |IBUF       |     1|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2556.191 ; gain = 840.293 ; free physical = 16232 ; free virtual = 37720
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2556.191 ; gain = 767.355 ; free physical = 16232 ; free virtual = 37721
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2556.199 ; gain = 840.293 ; free physical = 16232 ; free virtual = 37721
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2556.199 ; gain = 0.000 ; free physical = 16231 ; free virtual = 37721
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2556.199 ; gain = 0.000 ; free physical = 16395 ; free virtual = 37888
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c010b3a2
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2556.199 ; gain = 1003.793 ; free physical = 16394 ; free virtual = 37887
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1692.416; main = 1692.416; forked = 253.197
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3242.863; main = 2556.195; forked = 938.496
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2580.203 ; gain = 0.000 ; free physical = 16394 ; free virtual = 37888
+INFO: [Common 17-1381] The checkpoint '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP clk_wiz_0, cache-ID = 2c7170b2d21f4e56
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2636.230 ; gain = 0.000 ; free physical = 16394 ; free virtual = 37888
+INFO: [Common 17-1381] The checkpoint '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file clk_wiz_0_utilization_synth.rpt -pb clk_wiz_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 20 06:39:10 2026...
+[Sat Jun 20 06:39:22 2026] clk_wiz_0_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:45 . Memory (MB): peak = 8806.340 ; gain = 25.035 ; free physical = 17902 ; free virtual = 39395
+export_simulation -lib_map_path [list {modelsim=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/modelsim} {questa=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/questa} {xcelium=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/xcelium} {vcs=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/vcs} {riviera=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/riviera}] -of_objects [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.ip_user_files/sim_scripts -ip_user_files_dir /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.ip_user_files -ipstatic_source_dir /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+set_property  ip_repo_paths  {{/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/hdmi to vga converter/RD_hdmi_ip2020}} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/hdmi to vga converter/RD_hdmi_ip2020'.
+create_ip -name hdmi_tx -vendor realdigital.org -library realdigital -version 1.0 -module_name hdmi_tx_0
+set_property CONFIG.MODE {HDMI} [get_ips hdmi_tx_0]
+generate_target {instantiation_template} [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'hdmi_tx_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'hdmi_tx_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'hdmi_tx_0'...
+catch { config_ip_cache -export [get_ips -all hdmi_tx_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: hdmi_tx_0
+export_ip_user_files -of_objects [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci]
+launch_runs hdmi_tx_0_synth_1 -jobs 20
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: hdmi_tx_0
+[Sat Jun 20 06:41:27 2026] Launched hdmi_tx_0_synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/hdmi_tx_0_synth_1/runme.log
+INFO: [Vivado 12-4357] Exporting simulation files for 'hdmi_tx_0'... please wait for 'hdmi_tx_0_synth_1' run to finish...
+wait_on_run hdmi_tx_0_synth_1
+[Sat Jun 20 06:41:27 2026] Waiting for hdmi_tx_0_synth_1 to finish...
+[Sat Jun 20 06:41:32 2026] Waiting for hdmi_tx_0_synth_1 to finish...
+[Sat Jun 20 06:41:37 2026] Waiting for hdmi_tx_0_synth_1 to finish...
+[Sat Jun 20 06:41:42 2026] Waiting for hdmi_tx_0_synth_1 to finish...
+[Sat Jun 20 06:41:52 2026] Waiting for hdmi_tx_0_synth_1 to finish...
+[Sat Jun 20 06:42:02 2026] Waiting for hdmi_tx_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log hdmi_tx_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_tx_0.tcl
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Jun 20 06:41:29 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source hdmi_tx_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/hdmi to vga converter/RD_hdmi_ip2020'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: hdmi_tx_0
+Command: synth_design -top hdmi_tx_0 -part xc7s50csga324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24035
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2134.711 ; gain = 418.711 ; free physical = 16497 ; free virtual = 38015
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN0' becomes localparam in 'encode' with formal parameter declaration list [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/encode.v:145]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN1' becomes localparam in 'encode' with formal parameter declaration list [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/encode.v:146]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN2' becomes localparam in 'encode' with formal parameter declaration list [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/encode.v:147]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN3' becomes localparam in 'encode' with formal parameter declaration list [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/encode.v:148]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/synth/hdmi_tx_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_v1_0' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/hdmi_tx_v1_0.v:70]
+INFO: [Synth 8-6157] synthesizing module 'srldelay' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/srldelay.v:70]
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149045]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (0#1) [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149045]
+INFO: [Synth 8-6155] done synthesizing module 'srldelay' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/srldelay.v:70]
+INFO: [Synth 8-6157] synthesizing module 'encode' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'encode' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'encode__parameterized0' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized0' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'encode__parameterized1' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized1' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'serdes_10_to_1' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/serdes_10_to_1.v:43]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (0#1) [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (0#1) [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
+INFO: [Synth 8-6155] done synthesizing module 'serdes_10_to_1' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/serdes_10_to_1.v:43]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:99442]
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:99442]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_v1_0' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/hdmi_tx_v1_0.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/synth/hdmi_tx_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element hdmi_ctl1_reg was removed.  [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdl/hdmi_tx_v1_0.v:148]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2211.680 ; gain = 495.680 ; free physical = 16407 ; free virtual = 37926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2229.492 ; gain = 513.492 ; free physical = 16399 ; free virtual = 37918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2229.492 ; gain = 513.492 ; free physical = 16399 ; free virtual = 37918
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2235.430 ; gain = 0.000 ; free physical = 16391 ; free virtual = 37910
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2374.273 ; gain = 0.000 ; free physical = 16319 ; free virtual = 37839
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2374.273 ; gain = 0.000 ; free physical = 16313 ; free virtual = 37832
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2374.273 ; gain = 658.273 ; free physical = 16314 ; free virtual = 37833
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2382.277 ; gain = 666.277 ; free physical = 16314 ; free virtual = 37833
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2382.277 ; gain = 666.277 ; free physical = 16313 ; free virtual = 37833
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2382.277 ; gain = 666.277 ; free physical = 16311 ; free virtual = 37833
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input    5 Bit       Adders := 6     
+	   4 Input    5 Bit       Adders := 3     
+	   8 Input    4 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 15    
+	                1 Bit    Registers := 33    
++---Muxes : 
+	   2 Input   10 Bit        Muxes := 6     
+	   4 Input   10 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 15    
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 21    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2382.277 ; gain = 666.277 ; free physical = 16303 ; free virtual = 37829
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2409.277 ; gain = 693.277 ; free physical = 16278 ; free virtual = 37804
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2410.277 ; gain = 694.277 ; free physical = 16278 ; free virtual = 37804
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2429.309 ; gain = 713.309 ; free physical = 16260 ; free virtual = 37785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2581.121 ; gain = 865.121 ; free physical = 16126 ; free virtual = 37651
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2581.121 ; gain = 865.121 ; free physical = 16126 ; free virtual = 37651
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2581.121 ; gain = 865.121 ; free physical = 16126 ; free virtual = 37651
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2581.121 ; gain = 865.121 ; free physical = 16126 ; free virtual = 37651
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2581.121 ; gain = 865.121 ; free physical = 16126 ; free virtual = 37651
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2581.121 ; gain = 865.121 ; free physical = 16126 ; free virtual = 37651
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|hdmi_tx_0   | inst/encg/c0_reg_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|hdmi_tx_0   | inst/encr/c0_reg_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |LUT2      |    15|
+|2     |LUT3      |    38|
+|3     |LUT4      |    30|
+|4     |LUT5      |    72|
+|5     |LUT6      |   157|
+|6     |OSERDESE2 |     8|
+|8     |SRL16E    |    40|
+|9     |FDCE      |    42|
+|10    |FDRE      |   113|
+|11    |OBUFDS    |     4|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2581.121 ; gain = 865.121 ; free physical = 16126 ; free virtual = 37651
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2581.121 ; gain = 720.340 ; free physical = 16126 ; free virtual = 37651
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2581.129 ; gain = 865.121 ; free physical = 16126 ; free virtual = 37651
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2581.129 ; gain = 0.000 ; free physical = 16126 ; free virtual = 37651
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2637.148 ; gain = 0.000 ; free physical = 16289 ; free virtual = 37815
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c8f74e9a
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2637.148 ; gain = 1085.609 ; free physical = 16289 ; free virtual = 37815
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1752.889; main = 1715.927; forked = 250.436
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3320.781; main = 2637.152; forked = 938.500
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2661.160 ; gain = 0.000 ; free physical = 16291 ; free virtual = 37817
+INFO: [Common 17-1381] The checkpoint '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/hdmi_tx_0_synth_1/hdmi_tx_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP hdmi_tx_0, cache-ID = 5521ae6666fbb083
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2661.160 ; gain = 0.000 ; free physical = 16292 ; free virtual = 37819
+INFO: [Common 17-1381] The checkpoint '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/hdmi_tx_0_synth_1/hdmi_tx_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file hdmi_tx_0_utilization_synth.rpt -pb hdmi_tx_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 20 06:41:52 2026...
+[Sat Jun 20 06:42:07 2026] hdmi_tx_0_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:40 . Memory (MB): peak = 8948.266 ; gain = 0.000 ; free physical = 17840 ; free virtual = 39364
+export_simulation -lib_map_path [list {modelsim=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/modelsim} {questa=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/questa} {xcelium=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/xcelium} {vcs=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/vcs} {riviera=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/riviera}] -of_objects [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci] -directory /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.ip_user_files/sim_scripts -ip_user_files_dir /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.ip_user_files -ipstatic_source_dir /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name grid_mem
+set_property -dict [list \
+  CONFIG.Memory_Type {Simple_Dual_Port_RAM} \
+  CONFIG.Write_Depth_A {159201} \
+  CONFIG.Write_Width_A {1} \
+] [get_ips grid_mem]
+generate_target {instantiation_template} [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/grid_mem/grid_mem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'grid_mem'...
+generate_target all [get_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/grid_mem/grid_mem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'grid_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'grid_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'grid_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'grid_mem'...
+catch { config_ip_cache -export [get_ips -all grid_mem] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: grid_mem
+export_ip_user_files -of_objects [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/grid_mem/grid_mem.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/grid_mem/grid_mem.xci]
+launch_runs grid_mem_synth_1 -jobs 20
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: grid_mem
+[Sat Jun 20 06:45:53 2026] Launched grid_mem_synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/grid_mem_synth_1/runme.log
+INFO: [Vivado 12-4357] Exporting simulation files for 'grid_mem'... please wait for 'grid_mem_synth_1' run to finish...
+wait_on_run grid_mem_synth_1
+[Sat Jun 20 06:45:53 2026] Waiting for grid_mem_synth_1 to finish...
+[Sat Jun 20 06:45:58 2026] Waiting for grid_mem_synth_1 to finish...
+[Sat Jun 20 06:46:03 2026] Waiting for grid_mem_synth_1 to finish...
+[Sat Jun 20 06:46:08 2026] Waiting for grid_mem_synth_1 to finish...
+[Sat Jun 20 06:46:18 2026] Waiting for grid_mem_synth_1 to finish...
+[Sat Jun 20 06:46:28 2026] Waiting for grid_mem_synth_1 to finish...
+[Sat Jun 20 06:46:38 2026] Waiting for grid_mem_synth_1 to finish...
+
+*** Running vivado
+    with args -log grid_mem.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source grid_mem.tcl
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Jun 20 06:45:54 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source grid_mem.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/hdmi to vga converter/RD_hdmi_ip2020'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: grid_mem
+Command: synth_design -top grid_mem -part xc7s50csga324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26265
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2134.457 ; gain = 418.625 ; free physical = 16370 ; free virtual = 37890
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'grid_mem' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/grid_mem/synth/grid_mem.vhd:73]
+	Parameter C_FAMILY bound to: spartan7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: spartan7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_INIT_FILE bound to: grid_mem.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: NO_CHANGE - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 1 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 1 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 159201 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 159201 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 18 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 1 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 1 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 159201 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 159201 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 18 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 1 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 5 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     4.186924 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_9' declared at '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/grid_mem/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195208' bound to instance 'U0' of component 'blk_mem_gen_v8_4_9' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/grid_mem/synth/grid_mem.vhd:246]
+INFO: [Synth 8-256] done synthesizing module 'grid_mem' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/grid_mem/synth/grid_mem.vhd:73]
+WARNING: [Synth 8-7129] Port CLKB in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[0] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR_I in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR_I in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[17] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[16] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[15] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[14] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[13] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[12] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[11] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[10] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[9] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[8] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[7] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[6] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[5] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[4] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[3] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[2] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[1] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[0] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[0] in module blk_mem_gen_prim_wrapper__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR in module blk_mem_gen_prim_wrapper__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR in module blk_mem_gen_prim_wrapper__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRA in module blk_mem_gen_prim_wrapper__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REGCEA in module blk_mem_gen_prim_wrapper__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRB in module blk_mem_gen_prim_wrapper__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[0] in module blk_mem_gen_prim_wrapper__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[0] in module blk_mem_gen_prim_wrapper__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SLEEP in module blk_mem_gen_prim_wrapper__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_gen_prim_wrapper__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_prim_wrapper__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ECCPIPECE in module blk_mem_gen_prim_wrapper__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[0] in module blk_mem_gen_prim_wrapper__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR in module blk_mem_gen_prim_wrapper__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR in module blk_mem_gen_prim_wrapper__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRA in module blk_mem_gen_prim_wrapper__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REGCEA in module blk_mem_gen_prim_wrapper__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRB in module blk_mem_gen_prim_wrapper__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[0] in module blk_mem_gen_prim_wrapper__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[0] in module blk_mem_gen_prim_wrapper__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SLEEP in module blk_mem_gen_prim_wrapper__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_gen_prim_wrapper__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_prim_wrapper__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ECCPIPECE in module blk_mem_gen_prim_wrapper__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[0] in module blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR in module blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR in module blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRA in module blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REGCEA in module blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRB in module blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[0] in module blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[0] in module blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SLEEP in module blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ECCPIPECE in module blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MUX_RST[0] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_LAT_RST in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MUX_REGCE[0] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[17] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[16] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[15] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[14] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[13] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[12] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[11] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[10] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[9] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[8] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[7] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[6] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[5] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[4] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[3] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[2] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[1] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_IN[0] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[15] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[14] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[13] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[12] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[11] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[10] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[9] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[8] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[7] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[6] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[5] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[4] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[3] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[2] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[1] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERRIN[0] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERRIN[15] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERRIN[14] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERRIN[13] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERRIN[12] in module blk_mem_gen_mux__parameterized0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2413.902 ; gain = 698.070 ; free physical = 16084 ; free virtual = 37606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2413.902 ; gain = 698.070 ; free physical = 16084 ; free virtual = 37606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2413.902 ; gain = 698.070 ; free physical = 16084 ; free virtual = 37606
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2413.902 ; gain = 0.000 ; free physical = 16085 ; free virtual = 37607
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/grid_mem/grid_mem_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/grid_mem/grid_mem_ooc.xdc] for cell 'U0'
+Parsing XDC File [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/grid_mem_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/grid_mem_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2477.934 ; gain = 0.000 ; free physical = 16085 ; free virtual = 37608
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2477.934 ; gain = 0.000 ; free physical = 16081 ; free virtual = 37604
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2477.934 ; gain = 762.102 ; free physical = 16083 ; free virtual = 37606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2485.938 ; gain = 770.105 ; free physical = 16083 ; free virtual = 37606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/grid_mem_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2485.938 ; gain = 770.105 ; free physical = 16083 ; free virtual = 37606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2485.938 ; gain = 770.105 ; free physical = 16080 ; free virtual = 37605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
++---Muxes : 
+	   2 Input    1 Bit        Muxes := 33    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2493.945 ; gain = 778.113 ; free physical = 16071 ; free virtual = 37596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2493.945 ; gain = 778.113 ; free physical = 16073 ; free virtual = 37598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2493.945 ; gain = 778.113 ; free physical = 16073 ; free virtual = 37598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2493.945 ; gain = 778.113 ; free physical = 16073 ; free virtual = 37598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2595.758 ; gain = 879.926 ; free physical = 15983 ; free virtual = 37508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2595.758 ; gain = 879.926 ; free physical = 15982 ; free virtual = 37507
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2595.758 ; gain = 879.926 ; free physical = 15982 ; free virtual = 37507
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2595.758 ; gain = 879.926 ; free physical = 15982 ; free virtual = 37507
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2595.758 ; gain = 879.926 ; free physical = 15982 ; free virtual = 37507
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2595.758 ; gain = 879.926 ; free physical = 15982 ; free virtual = 37507
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT3     |     4|
+|2     |LUT4     |     2|
+|3     |LUT6     |     1|
+|4     |RAMB36E1 |     5|
+|7     |FDRE     |     6|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2595.758 ; gain = 879.926 ; free physical = 15982 ; free virtual = 37507
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 122 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2595.758 ; gain = 815.895 ; free physical = 15981 ; free virtual = 37506
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2595.766 ; gain = 879.926 ; free physical = 15981 ; free virtual = 37506
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2595.766 ; gain = 0.000 ; free physical = 15981 ; free virtual = 37506
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2598.727 ; gain = 0.000 ; free physical = 16135 ; free virtual = 37660
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: dfdcd83a
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2598.727 ; gain = 1047.324 ; free physical = 16135 ; free virtual = 37660
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1852.124; main = 1749.845; forked = 247.636
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3416.434; main = 2598.730; forked = 938.496
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2622.738 ; gain = 0.000 ; free physical = 16135 ; free virtual = 37660
+INFO: [Common 17-1381] The checkpoint '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/grid_mem_synth_1/grid_mem.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP grid_mem, cache-ID = 0827b7fdeb81631d
+INFO: [Coretcl 2-1174] Renamed 11 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2678.766 ; gain = 0.000 ; free physical = 16136 ; free virtual = 37662
+INFO: [Common 17-1381] The checkpoint '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/grid_mem_synth_1/grid_mem.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file grid_mem_utilization_synth.rpt -pb grid_mem_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 20 06:46:28 2026...
+[Sat Jun 20 06:46:43 2026] grid_mem_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:50 . Memory (MB): peak = 9007.184 ; gain = 0.000 ; free physical = 17701 ; free virtual = 39225
+export_simulation -lib_map_path [list {modelsim=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/modelsim} {questa=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/questa} {xcelium=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/xcelium} {vcs=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/vcs} {riviera=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/riviera}] -of_objects [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/grid_mem/grid_mem.xci] -directory /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.ip_user_files/sim_scripts -ip_user_files_dir /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.ip_user_files -ipstatic_source_dir /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+synth_design -top chipInterface -part xc7s50csga324-1 -lint 
+Command: synth_design -top chipInterface -part xc7s50csga324-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+invalid command name "NULL"
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design -top chipInterface -part xc7s50csga324-1 -lint 
+Command: synth_design -top chipInterface -part xc7s50csga324-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+invalid command name "NULL"
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design -top chipInterface -part xc7s50csga324-1 -lint 
+Command: synth_design -top chipInterface -part xc7s50csga324-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+invalid command name "NULL"
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design -top chipInterface -part xc7s50csga324-1 -lint 
+Command: synth_design -top chipInterface -part xc7s50csga324-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+invalid command name "NULL"
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Sat Jun 20 06:52:21 2026] Launched synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/runme.log
+[Sat Jun 20 06:52:21 2026] Launched impl_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/runme.log
+add_files -norecurse /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/library.sv
+update_compile_order -fileset sources_1
+synth_design -top chipInterface -part xc7s50csga324-1 -lint 
+Command: synth_design -top chipInterface -part xc7s50csga324-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+invalid command name "NULL"
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+reset_run synth_1
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+reset_runs: Time (s): cpu = 00:00:00.68 ; elapsed = 00:00:30 . Memory (MB): peak = 9051.621 ; gain = 0.000 ; free physical = 17860 ; free virtual = 39339
+INFO: [Common 17-344] 'reset_runs' was cancelled
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Sat Jun 20 06:55:11 2026] Launched synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/runme.log
+[Sat Jun 20 06:55:11 2026] Launched impl_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/runme.log
+export_ip_user_files -of_objects  [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv] -no_script -reset -force -quiet
+remove_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -top chipInterface -part xc7s50csga324-1 -lint 
+Command: synth_design -top chipInterface -part xc7s50csga324-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+invalid command name "NULL"
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+reset_run synth_1
+reset_runs: Time (s): cpu = 00:00:00.79 ; elapsed = 00:00:30 . Memory (MB): peak = 9213.766 ; gain = 0.000 ; free physical = 17406 ; free virtual = 39251
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Sat Jun 20 06:58:19 2026] Launched synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/runme.log
+[Sat Jun 20 06:58:19 2026] Launched impl_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/runme.log
+update_files -from_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv -to_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv' with file '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv'.
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_p1.sv] -no_script -reset -force -quiet
+remove_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_p1.sv
+update_compile_order -fileset sources_1
+add_files -norecurse {/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/update_trace.sv /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/library.sv /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/vga.sv /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/components.sv /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv}
+WARNING: [filemgmt 56-12] File '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/update_trace.sv' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/library.sv' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/vga.sv' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/components.sv' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv' cannot be added to the project because it already exists in the project, skipping this file
+synth_design -top chipInterface -part xc7s50csga324-1 -lint 
+Command: synth_design -top chipInterface -part xc7s50csga324-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+invalid command name "NULL"
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design -top chipInterface -part xc7s50csga324-1 -lint 
+Command: synth_design -top chipInterface -part xc7s50csga324-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+invalid command name "NULL"
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design -top chipInterface -part xc7s50csga324-1 -lint 
+Command: synth_design -top chipInterface -part xc7s50csga324-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+invalid command name "NULL"
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+reset_run synth_1
+reset_runs: Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:30 . Memory (MB): peak = 9283.793 ; gain = 9.988 ; free physical = 17379 ; free virtual = 39220
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Sat Jun 20 07:08:32 2026] Launched synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/runme.log
+[Sat Jun 20 07:08:32 2026] Launched impl_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/runme.log
+add_files -norecurse /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/gpio_test.sv
+update_compile_order -fileset sources_1
+reset_run synth_1
+reset_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:30 . Memory (MB): peak = 9357.844 ; gain = 9.953 ; free physical = 17385 ; free virtual = 39215
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Sat Jun 20 07:11:41 2026] Launched synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/runme.log
+[Sat Jun 20 07:11:41 2026] Launched impl_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+reset_target all [get_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci]
+export_ip_user_files -of_objects  [get_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset hdmi_tx_0] /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci]
+INFO: [Project 1-386] Moving file '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci' from fileset 'hdmi_tx_0' to fileset 'sources_1'.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+reset_run synth_1
+INFO: [Project 1-1160] Copying file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/chipInterface.dcp to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+reset_runs: Time (s): cpu = 00:00:00.4 ; elapsed = 00:00:12 . Memory (MB): peak = 9614.055 ; gain = 0.000 ; free physical = 17239 ; free virtual = 39152
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'hdmi_tx_0'...
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: hdmi_tx_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 5521ae6666fbb083 to dir: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0.dcp to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0_stub.v to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0_stub.vhdl to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0_sim_netlist.v to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0_sim_netlist.vhdl to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP hdmi_tx_0, cache-ID = 5521ae6666fbb083; cache size = 0.869 MB.
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci' is already up-to-date
+[Sat Jun 20 07:18:53 2026] Launched synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/runme.log
+[Sat Jun 20 07:18:53 2026] Launched impl_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/runme.log
+reset_target all [get_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci]
+export_ip_user_files -of_objects  [get_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci] -sync -no_script -force -quiet
+generate_target all [get_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'hdmi_tx_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'hdmi_tx_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'hdmi_tx_0'...
+catch { config_ip_cache -export [get_ips -all hdmi_tx_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: hdmi_tx_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 5521ae6666fbb083 to dir: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0.dcp to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0_stub.v to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0_stub.vhdl to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0_sim_netlist.v to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0_sim_netlist.vhdl to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP hdmi_tx_0, cache-ID = 5521ae6666fbb083; cache size = 0.869 MB.
+export_ip_user_files -of_objects [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci'
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/utils_1/imports/synth_1/chipInterface.dcp with file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/chipInterface.dcp
+reset_runs: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:12 . Memory (MB): peak = 9934.285 ; gain = 0.000 ; free physical = 17134 ; free virtual = 39032
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+launch_runs synth_1 -jobs 20
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci' is already up-to-date
+[Sat Jun 20 07:23:43 2026] Launched synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2024.2
+  **** Build date : Oct 29 2024 at 10:16:47
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.2.0
+  ****** Build date   : Oct 30 2024-14:19:07
+    **** Build number : 2024.2.1730312347
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887235230058A
+current_hw_device [get_hw_devices xc7s50_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
+INFO: [Labtools 27-1435] Device xc7s50 (JTAG device index = 0) is not programmed (DONE status = 0).
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci' is already up-to-date
+[Sat Jun 20 07:27:28 2026] Launched impl_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/runme.log
+export_ip_user_files -of_objects  [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci] -no_script -reset -force -quiet
+remove_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+create_ip -name hdmi_tx -vendor realdigital.org -library realdigital -version 1.0 -module_name hdmi_tx_0
+set_property CONFIG.MODE {HDMI} [get_ips hdmi_tx_0]
+generate_target {instantiation_template} [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'hdmi_tx_0'...
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+generate_target all [get_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'hdmi_tx_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'hdmi_tx_0'...
+catch { config_ip_cache -export [get_ips -all hdmi_tx_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: hdmi_tx_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 5521ae6666fbb083 to dir: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0.dcp to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0_stub.v to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0_stub.vhdl to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0_sim_netlist.v to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/ip/2024.2/5/5/5521ae6666fbb083/hdmi_tx_0_sim_netlist.vhdl to /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP hdmi_tx_0, cache-ID = 5521ae6666fbb083; cache size = 0.869 MB.
+export_ip_user_files -of_objects [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0.xci'
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+reset_run impl_1
+reset_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 10214.516 ; gain = 0.000 ; free physical = 16689 ; free virtual = 38770
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/utils_1/imports/synth_1/chipInterface.dcp with file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/chipInterface.dcp
+reset_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:51 . Memory (MB): peak = 10214.516 ; gain = 0.000 ; free physical = 16773 ; free virtual = 38854
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0.xci' is already up-to-date
+[Sat Jun 20 07:34:01 2026] Launched synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/runme.log
+[Sat Jun 20 07:34:01 2026] Launched impl_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/runme.log
+set_property STEPS.OPT_DESIGN.IS_ENABLED false [get_runs impl_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+reset_run impl_1
+reset_runs: Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:12 . Memory (MB): peak = 10214.516 ; gain = 0.000 ; free physical = 16719 ; free virtual = 38803
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0.xci' is already up-to-date
+[Sat Jun 20 07:36:10 2026] Launched impl_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/runme.log
+export_ip_user_files -of_objects  [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0.xci] -no_script -reset -force -quiet
+remove_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0.xci
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+create_ip -name hdmi_tx -vendor realdigital.org -library realdigital -version 1.0 -module_name hdmi_tx_0
+generate_target {instantiation_template} [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_2/hdmi_tx_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'hdmi_tx_0'...
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+generate_target all [get_files  /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_2/hdmi_tx_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'hdmi_tx_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'hdmi_tx_0'...
+catch { config_ip_cache -export [get_ips -all hdmi_tx_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: hdmi_tx_0
+export_ip_user_files -of_objects [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_2/hdmi_tx_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_2/hdmi_tx_0.xci]
+launch_runs hdmi_tx_0_synth_1 -jobs 20
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: hdmi_tx_0
+[Sat Jun 20 07:39:50 2026] Launched hdmi_tx_0_synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/hdmi_tx_0_synth_1/runme.log
+INFO: [Vivado 12-4357] Exporting simulation files for 'hdmi_tx_0'... please wait for 'hdmi_tx_0_synth_1' run to finish...
+wait_on_run hdmi_tx_0_synth_1
+[Sat Jun 20 07:39:50 2026] Waiting for hdmi_tx_0_synth_1 to finish...
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+[Sat Jun 20 07:39:55 2026] Waiting for hdmi_tx_0_synth_1 to finish...
+[Sat Jun 20 07:40:00 2026] Waiting for hdmi_tx_0_synth_1 to finish...
+[Sat Jun 20 07:40:05 2026] Waiting for hdmi_tx_0_synth_1 to finish...
+[Sat Jun 20 07:40:15 2026] Waiting for hdmi_tx_0_synth_1 to finish...
+[Sat Jun 20 07:40:25 2026] Waiting for hdmi_tx_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log hdmi_tx_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_tx_0.tcl
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Jun 20 07:39:52 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source hdmi_tx_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/hdmi to vga converter/RD_hdmi_ip2020'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: hdmi_tx_0
+Command: synth_design -top hdmi_tx_0 -part xc7s50csga324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 48456
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2134.711 ; gain = 419.711 ; free physical = 15220 ; free virtual = 37324
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN0' becomes localparam in 'encode' with formal parameter declaration list [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:145]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN1' becomes localparam in 'encode' with formal parameter declaration list [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:146]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN2' becomes localparam in 'encode' with formal parameter declaration list [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:147]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN3' becomes localparam in 'encode' with formal parameter declaration list [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:148]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/synth/hdmi_tx_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_v1_0' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/hdmi_tx_v1_0.v:70]
+INFO: [Synth 8-6157] synthesizing module 'srldelay' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/srldelay.v:70]
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149045]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (0#1) [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149045]
+INFO: [Synth 8-6155] done synthesizing module 'srldelay' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/srldelay.v:70]
+INFO: [Synth 8-6157] synthesizing module 'encode' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'encode' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'encode__parameterized0' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized0' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'encode__parameterized1' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized1' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'serdes_10_to_1' [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/serdes_10_to_1.v:43]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (0#1) [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (0#1) [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
+INFO: [Synth 8-6155] done synthesizing module 'serdes_10_to_1' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/serdes_10_to_1.v:43]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:99442]
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:99442]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_v1_0' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/hdmi_tx_v1_0.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/synth/hdmi_tx_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element ade_q_reg was removed.  [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:174]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_reg was removed.  [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:175]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_q_reg was removed.  [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:176]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_qq_reg was removed.  [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:177]
+WARNING: [Synth 8-6014] Unused sequential element adin_q_reg was removed.  [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:184]
+WARNING: [Synth 8-6014] Unused sequential element adin_reg_reg was removed.  [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:185]
+WARNING: [Synth 8-6014] Unused sequential element ade_q_reg was removed.  [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:174]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_reg was removed.  [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:175]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_q_reg was removed.  [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:176]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_qq_reg was removed.  [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:177]
+WARNING: [Synth 8-6014] Unused sequential element adin_q_reg was removed.  [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:184]
+WARNING: [Synth 8-6014] Unused sequential element adin_reg_reg was removed.  [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.gen/sources_1/ip/hdmi_tx_0_2/hdl/encode.v:185]
+WARNING: [Synth 8-7129] Port adin[3] in module encode__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[2] in module encode__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[1] in module encode__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[0] in module encode__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ade in module encode__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[3] in module encode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[2] in module encode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[1] in module encode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[0] in module encode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ade in module encode is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2212.680 ; gain = 497.680 ; free physical = 15132 ; free virtual = 37239
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2227.523 ; gain = 512.523 ; free physical = 15122 ; free virtual = 37229
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2227.523 ; gain = 512.523 ; free physical = 15122 ; free virtual = 37229
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2233.461 ; gain = 0.000 ; free physical = 15116 ; free virtual = 37223
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2375.273 ; gain = 0.000 ; free physical = 15048 ; free virtual = 37155
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2375.273 ; gain = 0.000 ; free physical = 15042 ; free virtual = 37148
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2375.273 ; gain = 660.273 ; free physical = 15038 ; free virtual = 37145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2383.277 ; gain = 668.277 ; free physical = 15038 ; free virtual = 37145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2383.277 ; gain = 668.277 ; free physical = 15038 ; free virtual = 37145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2383.277 ; gain = 668.277 ; free physical = 15036 ; free virtual = 37145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input    5 Bit       Adders := 6     
+	   4 Input    5 Bit       Adders := 3     
+	   8 Input    4 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 9     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   5 Input   10 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 6     
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 15    
+	   2 Input    1 Bit        Muxes := 21    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2383.277 ; gain = 668.277 ; free physical = 15038 ; free virtual = 37147
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2408.277 ; gain = 693.277 ; free physical = 15017 ; free virtual = 37125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2408.277 ; gain = 693.277 ; free physical = 15016 ; free virtual = 37124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2427.309 ; gain = 712.309 ; free physical = 14998 ; free virtual = 37106
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2579.121 ; gain = 864.121 ; free physical = 14862 ; free virtual = 36971
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2579.121 ; gain = 864.121 ; free physical = 14862 ; free virtual = 36970
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2579.121 ; gain = 864.121 ; free physical = 14862 ; free virtual = 36970
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2579.121 ; gain = 864.121 ; free physical = 14862 ; free virtual = 36970
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2579.121 ; gain = 864.121 ; free physical = 14864 ; free virtual = 36972
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2579.121 ; gain = 864.121 ; free physical = 14864 ; free virtual = 36972
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |LUT2      |     9|
+|2     |LUT3      |    33|
+|3     |LUT4      |    23|
+|4     |LUT5      |    78|
+|5     |LUT6      |    97|
+|6     |OSERDESE2 |     8|
+|8     |SRL16E    |    27|
+|9     |FDCE      |    42|
+|10    |FDRE      |    87|
+|11    |OBUFDS    |     4|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2579.121 ; gain = 864.121 ; free physical = 14864 ; free virtual = 36972
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2579.121 ; gain = 716.371 ; free physical = 14861 ; free virtual = 36969
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2579.129 ; gain = 864.121 ; free physical = 14861 ; free virtual = 36969
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2579.129 ; gain = 0.000 ; free physical = 14861 ; free virtual = 36969
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2635.148 ; gain = 0.000 ; free physical = 15026 ; free virtual = 37134
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: f739526b
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2635.148 ; gain = 1083.641 ; free physical = 15025 ; free virtual = 37134
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1812.202; main = 1774.421; forked = 276.413
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3321.777; main = 2635.152; forked = 938.496
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2659.160 ; gain = 0.000 ; free physical = 15026 ; free virtual = 37134
+INFO: [Common 17-1381] The checkpoint '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/hdmi_tx_0_synth_1/hdmi_tx_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP hdmi_tx_0, cache-ID = 29d35abffad17505
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2659.160 ; gain = 0.000 ; free physical = 15027 ; free virtual = 37137
+INFO: [Common 17-1381] The checkpoint '/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/hdmi_tx_0_synth_1/hdmi_tx_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file hdmi_tx_0_utilization_synth.rpt -pb hdmi_tx_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 20 07:40:15 2026...
+[Sat Jun 20 07:40:25 2026] hdmi_tx_0_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:35 . Memory (MB): peak = 10361.688 ; gain = 0.000 ; free physical = 16566 ; free virtual = 38673
+export_simulation -lib_map_path [list {modelsim=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/modelsim} {questa=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/questa} {xcelium=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/xcelium} {vcs=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/vcs} {riviera=/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.cache/compile_simlib/riviera}] -of_objects [get_files /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/sources_1/ip/hdmi_tx_0_2/hdmi_tx_0.xci] -directory /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.ip_user_files/sim_scripts -ip_user_files_dir /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.ip_user_files -ipstatic_source_dir /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+set_property STEPS.OPT_DESIGN.IS_ENABLED true [get_runs impl_1]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/utils_1/imports/synth_1/chipInterface.dcp with file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/chipInterface.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Sat Jun 20 07:40:48 2026] Launched synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/runme.log
+[Sat Jun 20 07:40:48 2026] Launched impl_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+set_property STEPS.OPT_DESIGN.IS_ENABLED false [get_runs impl_1]
+reset_run impl_1
+reset_runs: Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:12 . Memory (MB): peak = 10441.598 ; gain = 0.000 ; free physical = 16372 ; free virtual = 38478
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Sat Jun 20 07:43:07 2026] Launched impl_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv:]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/utils_1/imports/synth_1/chipInterface.dcp with file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/chipInterface.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Sat Jun 20 07:46:19 2026] Launched synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/runme.log
+[Sat Jun 20 07:46:19 2026] Launched impl_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv:]
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/chipInterface.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/Chipinterface2.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_border.sv:]
+set_property STEPS.OPT_DESIGN.IS_ENABLED true [get_runs impl_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.srcs/utils_1/imports/synth_1/chipInterface.dcp with file /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/chipInterface.dcp
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/ChipInterface.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron-build18/sources/draw_obj.sv:]
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Sat Jun 20 07:59:15 2026] Launched synth_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/synth_1/runme.log
+[Sat Jun 20 07:59:15 2026] Launched impl_1...
+Run output will be captured here: /afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {/afs/andrew.cmu.edu/usr14/wchowdhu/private/tron/tron.runs/impl_1/chipInterface.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget

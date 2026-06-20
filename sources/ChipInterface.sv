@@ -50,7 +50,8 @@ module chipInterface (
   logic pd[3:0];
 
   always_comb begin
-    case ({pd1_sync, pd3_sync, pd4_sync, pd2_sync})
+    //case ({pd1_sync, pd3_sync, pd4_sync, pd2_sync})
+    case (p1_buttons)
         4'b0001: en_update1 = 1'b1; // left
         4'b0010: en_update1 = 1'b1; //right
         4'b0100: en_update1 = 1'b1; //up
@@ -82,10 +83,11 @@ module chipInterface (
     end
     
     else if (en_update1) begin
-      p1_info <= {pd1_sync, pd3_sync, pd4_sync, pd2_sync};
+      // p1_info <= {pd1_sync, pd3_sync, pd4_sync, pd2_sync};
+      p1_info <= p1_buttons;
     end
     else if (en_update2) begin
-      p2_info = {pd5_sync, pd7_sync, pd8_sync, pd6_sync};
+      p2_info <= {pd5_sync, pd7_sync, pd8_sync, pd6_sync};
     end
   end
 
@@ -146,7 +148,18 @@ module chipInterface (
                                         pd8_sync, pd7_sync, pd6_sync, pd5_sync}));
 
   // Reset button
-  Synchronizer syn17(.async(BTN[0]), .clock(clk_40MHz), .sync(BTN_reset));
+  Synchronizer syn17(.async(SW[0]), .clock(clk_40MHz), .sync(BTN_reset));
+  
+  // EXTRA
+    // Player 1 direction from onboard buttons (one-hot, same encoding as Pmod)
+  // bit0=left, bit1=right, bit2=up, bit3=down
+  logic btn_left, btn_right, btn_up, btn_down;
+  logic [3:0] p1_buttons;
+  Synchronizer synb0(.async(BTN[0]), .clock(clk_40MHz), .sync(btn_left));
+  Synchronizer synb1(.async(BTN[1]), .clock(clk_40MHz), .sync(btn_right));
+  Synchronizer synb2(.async(BTN[2]), .clock(clk_40MHz), .sync(btn_up));
+  Synchronizer synb3(.async(BTN[3]), .clock(clk_40MHz), .sync(btn_down));
+  assign p1_buttons = {btn_down, btn_up, btn_right, btn_left};
 
   logic en_update1, en_update2;
 
