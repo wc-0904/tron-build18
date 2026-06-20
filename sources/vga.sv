@@ -39,8 +39,8 @@ module vga
                           .low('0), .is_between(v_sync));
 
   // TODO: Remove this, lowkey never used
-  RangeCheck #(10) rc5(.val(v_line), .high(10'd626), .low(10'd27), 
-                       .is_between(r_en));
+  // RangeCheck #(10) rc5(.val(v_line), .high(10'd626), .low(10'd27), 
+  //                     .is_between(r_en));
 
   // comparators to check if reached the end of an hCount of v_line cycle
   Comparator #(WIDTH) cmp1(.A(hCount), .B(11'd1055), .AeqB(h_end));

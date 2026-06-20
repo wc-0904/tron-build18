@@ -1,6 +1,7 @@
 // Connects the logic of our game to our chip so that the game can be displayed
 // Allows us to control whether the players are moving up, down, left, right
 
+// `default_nettype none
 module chipInterface (
     input  logic        CLOCK_100,
     input  logic [ 3:0] BTN, 
@@ -15,33 +16,21 @@ module chipInterface (
 
   logic clk_40MHz, clk_200MHz;
   logic locked, reset;
-
+  
+  // LEDs off
+  assign LD = 16'b0;
 
   //clock wizard configured with a 1x and 5x clock
   clk_wiz_0 clk_wiz (.clk_out1(clk_40MHz), .clk_out2(clk_200MHz), 
                     .reset, .locked(locked), .clk_in1(CLOCK_100));
-  
-  
-  // Your code
-  // Put your vga module here
+
+  // Misc logic variables
   logic [9:0] row, col;
   logic [7:0] red, green, blue;
   logic [3:0] p1_info, p2_info;
   logic HS, VS, blank, BTN_reset, dflt;
   logic SW_lup, SW_lmove, SW_rup, SW_rmove;
-  
-
-  vga VGA(.clock_40MHz(clk_40MHz), .reset, .HS, .VS, .blank, .row, .col);
-  
-//   Synchronizer syn1(.async(SW[15]), .clock(clk_40MHz), .sync(SW_lup));
-//   Synchronizer syn2(.async(SW[14]), .clock(clk_40MHz), .sync(SW_lmove));
-//   Synchronizer syn3(.async(SW[0]), .clock(clk_40MHz), .sync(SW_rup));
-//   Synchronizer syn4(.async(SW[1]), .clock(clk_40MHz), .sync(SW_rmove));
-  // Synchronizer syn6(.async(BTN[3]), .clock(clk_40MHz), .sync(serve));
-  
-//   assign p1_info = 3'b000;
-//   assign p2_info = 3'b001;
-
+  logic en_update1, en_update2;
   logic [7:0] red_o, green_o, blue_o;
   logic [7:0] red_t, green_t, blue_t;
   logic en_cond;
@@ -49,29 +38,43 @@ module chipInterface (
   logic collided;
   logic pd[3:0];
 
+  // P1 button logic variables
+  logic btn_left, btn_right, btn_up, btn_down;
+  logic [3:0] p1_buttons;
+  
+  // Connect VGA module signals
+  vga VGA(.clock_40MHz(clk_40MHz), .reset, .HS, .VS, .blank, .row, .col);
+
+
+
   always_comb begin
+    // PMOD controls for P1, in case P1 should be controlled externally
     //case ({pd1_sync, pd3_sync, pd4_sync, pd2_sync})
+
+    // Button Controls for P1, default
     case (p1_buttons)
         4'b0001: en_update1 = 1'b1; // left
-        4'b0010: en_update1 = 1'b1; //right
-        4'b0100: en_update1 = 1'b1; //up
-        4'b1000: en_update1 = 1'b1; //down
+        4'b0010: en_update1 = 1'b1; // right
+        4'b0100: en_update1 = 1'b1; // up
+        4'b1000: en_update1 = 1'b1; // down
         default: begin
             en_update1 = 1'b0;
         end
     endcase
 
+    // PMOD controls for P2
     case ({pd5_sync, pd7_sync, pd8_sync, pd6_sync})
         4'b0001: en_update2 = 1'b1; // left
-        4'b0010: en_update2 = 1'b1; //right
-        4'b0100: en_update2 = 1'b1; //up
-        4'b1000: en_update2 = 1'b1; //down
+        4'b0010: en_update2 = 1'b1; // right
+        4'b0100: en_update2 = 1'b1; // up
+        4'b1000: en_update2 = 1'b1; // down
         default: begin
             en_update2 = 1'b0;
         end
     endcase
   end
 
+  // Stop on Reset or Collision
   always_ff @(posedge clk_40MHz) begin
     if (BTN_reset || reset) begin
       p1_info <= 4'b0001;
@@ -83,28 +86,21 @@ module chipInterface (
     end
     
     else if (en_update1) begin
+
+      // PMOD for P1
       // p1_info <= {pd1_sync, pd3_sync, pd4_sync, pd2_sync};
+
+      // Buttons for P1
       p1_info <= p1_buttons;
+
     end
+
+    // PMOD for P2
     else if (en_update2) begin
       p2_info <= {pd5_sync, pd7_sync, pd8_sync, pd6_sync};
     end
   end
 
-
-  // Player 1 and 2 Movement Connections
-  // always_comb begin
-  //   if (collided) begin
-  //       p1_info = 4'b0;
-  //       p2_info = 4'b0;
-  //   end
-  //   // else begin
-  //   //     // p1_info = {p1_bit3, p1_bit2, p1_bit1, p1_bit0};
-  //   //     p1_info = {pd1_sync, pd3_sync, pd4_sync, pd2_sync};
-  //   //     // p2_info = {p2_bit3, p2_bit2, p2_bit1, p2_bit0};
-  //   //     p2_info = {pd5_sync, pd7_sync, pd8_sync, pd6_sync};
-  //   // end
-  // end
 
   draw_trace dt(.reset(BTN_reset), .clock(clk_40MHz), .row, .col, 
                 .red(red_t), .green(green_t), .blue(blue_t), .en_cond, 
@@ -141,34 +137,19 @@ module chipInterface (
   Synchronizer syn14(.async(PD6), .clock(clk_40MHz), .sync(pd6_sync));
   Synchronizer syn15(.async(PD7), .clock(clk_40MHz), .sync(pd7_sync));
   Synchronizer syn16(.async(PD8), .clock(clk_40MHz), .sync(pd8_sync));
-  // assign pd = {pd4_sync, pd3_sync, pd2_sync, pd1_sync};
-
-  // I/O Test
-  gpio_test gt(.led(LD[7:0]), .pd_port({pd4_sync, pd3_sync, pd2_sync, pd1_sync,
-                                        pd8_sync, pd7_sync, pd6_sync, pd5_sync}));
 
   // Reset button
   Synchronizer syn17(.async(SW[0]), .clock(clk_40MHz), .sync(BTN_reset));
   
-  // EXTRA
-    // Player 1 direction from onboard buttons (one-hot, same encoding as Pmod)
+  // P1 Button Control Signals
+  // Player 1 direction from onboard buttons (one-hot, same encoding as Pmod)
   // bit0=left, bit1=right, bit2=up, bit3=down
-  logic btn_left, btn_right, btn_up, btn_down;
-  logic [3:0] p1_buttons;
+
   Synchronizer synb0(.async(BTN[0]), .clock(clk_40MHz), .sync(btn_left));
   Synchronizer synb1(.async(BTN[1]), .clock(clk_40MHz), .sync(btn_right));
   Synchronizer synb2(.async(BTN[2]), .clock(clk_40MHz), .sync(btn_up));
   Synchronizer synb3(.async(BTN[3]), .clock(clk_40MHz), .sync(btn_down));
   assign p1_buttons = {btn_down, btn_up, btn_right, btn_left};
-
-  logic en_update1, en_update2;
-
-// Connect signals to the VGA to HDMI converter
-// Make sure you connect your blank signal to the vde input
-// Make sure you connect your VS signal to the vsync input
-// Make sure you connect your HS signal to the hsync input
-// Your red/green/blue signals go to the red/green/blue inputs
-
 
     //Real Digital VGA to HDMI converter
     hdmi_tx_0 vga_to_hdmi (
@@ -283,9 +264,6 @@ module BCDtoSevenSegment
     end
 
 endmodule: BCDtoSevenSegment
-
-// Required in every 18-240 file, but commented out to prevent synthesis issues
-// `default_nettype none
 
 /*
  * This module should be interfaced with a combinational 7-Segment Display
